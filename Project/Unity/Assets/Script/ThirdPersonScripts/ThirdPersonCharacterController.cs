@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Script.ThirdPersonScripts
@@ -7,13 +8,18 @@ namespace Script.ThirdPersonScripts
     {
 
         [SerializeField] private Transform playerTransform;
+        [SerializeField] private Rigidbody playerRigidbody;
         [SerializeField] private Transform cameraTransform;
 
         [SerializeField] private ThirdPersonCombatController combatController;
         [SerializeField] private ThirdPersonAnimationManager animationManager;
         
         [SerializeField] private float characterSpeed;
-      
+        [SerializeField] private float characterJumpSpeed;
+        [SerializeField] private float fallMultiplier;
+
+        private bool _jumping;
+        private Vector3 _jumpIntent;
         private Vector3 _directionIntent;
         private Vector3 _rotationIntent;
 
@@ -36,19 +42,42 @@ namespace Script.ThirdPersonScripts
             right.Normalize();
             
             animationManager.CharacterAnimationMovement(values);
+            
+            _directionIntent = values.y * forward + values.x * right;
+            
 
-            _directionIntent =  values.y * forward + values.x * right;
+        }
 
+        public void OnCharacterJump()
+        {
+            _jumping = true;
         }
 
         // Update is called once per frame
         private void FixedUpdate()
         {
-            if (combatController.IsAttacking)
+            /*if (combatController.IsAttacking)
             {
                 return;
+            }*/
+
+            
+            if (_jumping)
+            {
+                _jumpIntent = Vector3.up;
+                _jumping = false;
             }
-            playerTransform.Translate(_directionIntent * (characterSpeed * Time.deltaTime), Space.World);
+            else
+            {
+                _jumpIntent = Vector3.zero;
+            }
+
+            playerRigidbody.AddForce(_directionIntent.x * characterSpeed, _jumpIntent.y * characterJumpSpeed, _directionIntent.z * characterSpeed, ForceMode.VelocityChange);
+
+            if (playerRigidbody.velocity.y < 0)
+            {
+                playerRigidbody.velocity += Vector3.up * (Physics.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime);
+            }
 
             if (_directionIntent != Vector3.zero)
             {

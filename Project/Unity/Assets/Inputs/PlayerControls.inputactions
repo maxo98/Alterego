@@ -28,6 +28,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "CharacterJump",
+                    "type": "Button",
+                    "id": "a2272371-fb57-4c64-a377-89f27608af88",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -105,6 +113,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "CharacterLightAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "749689c5-0551-412f-a835-2ce3589fa3f3",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CharacterJump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

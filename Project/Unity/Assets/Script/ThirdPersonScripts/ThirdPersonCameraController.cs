@@ -1,8 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Script
+namespace Script.ThirdPersonScripts
 {
     public class ThirdPersonCameraController : MonoBehaviour
     {
