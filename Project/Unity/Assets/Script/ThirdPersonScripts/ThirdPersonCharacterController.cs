@@ -16,9 +16,11 @@ namespace Script.ThirdPersonScripts
         
         [SerializeField] private float characterSpeed;
         [SerializeField] private float characterJumpSpeed;
+        [SerializeField] private float characterDashForce;
         [SerializeField] private float fallMultiplier;
 
         private bool _jumping;
+        private bool _dashing;
         private Vector3 _jumpIntent;
         private Vector3 _directionIntent;
         private Vector3 _rotationIntent;
@@ -44,8 +46,11 @@ namespace Script.ThirdPersonScripts
             animationManager.CharacterAnimationMovement(values);
             
             _directionIntent = values.y * forward + values.x * right;
-            
+        }
 
+        public void OnCharacterDash()
+        {
+            _dashing = true;
         }
 
         public void OnCharacterJump()
@@ -61,7 +66,6 @@ namespace Script.ThirdPersonScripts
                 return;
             }*/
 
-            
             if (_jumping)
             {
                 _jumpIntent = Vector3.up;
@@ -74,6 +78,13 @@ namespace Script.ThirdPersonScripts
 
             playerRigidbody.AddForce(_directionIntent.x * characterSpeed, _jumpIntent.y * characterJumpSpeed, _directionIntent.z * characterSpeed, ForceMode.VelocityChange);
 
+            if (_dashing)
+            {
+                _dashing = false;
+                playerRigidbody.AddForce(_directionIntent.x * characterDashForce, playerRigidbody.velocity.y,
+                    _directionIntent.z * characterDashForce, ForceMode.VelocityChange); 
+            }
+            
             if (playerRigidbody.velocity.y < 0)
             {
                 playerRigidbody.velocity += Vector3.up * (Physics.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime);
