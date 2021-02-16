@@ -121,6 +121,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &63253862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 63253863}
+  m_Layer: 0
+  m_Name: Skills
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &63253863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63253862}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1412944102}
+  m_Father: {fileID: 2004284485}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &475978494
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,6 +430,64 @@ Transform:
   m_Father: {fileID: 1447338719}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1412944101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1412944102}
+  - component: {fileID: 1412944104}
+  - component: {fileID: 1412944103}
+  m_Layer: 0
+  m_Name: Action1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1412944102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412944101}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 63253863}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1412944103
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412944101}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 4}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1412944104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412944101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e63e4499b44e94faf7a09793b260f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangeCollider: {fileID: 0}
 --- !u!1 &1447338718
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,6 +620,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970570106}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2004284485 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5893086146454135881, guid: 9b4b8642cdcebf0408252484a7dadaa0,
+    type: 3}
+  m_PrefabInstance: {fileID: 5893086147100804483}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5893086147100804483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -562,6 +657,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AngularDrag
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893086146831995824, guid: 9b4b8642cdcebf0408252484a7dadaa0,
+        type: 3}
+      propertyPath: m_Name
+      value: Target
       objectReference: {fileID: 0}
     - target: {fileID: 5893086147782299626, guid: 9b4b8642cdcebf0408252484a7dadaa0,
         type: 3}
@@ -648,6 +748,11 @@ PrefabInstance:
       propertyPath: characterDashForce
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5893086147782299631, guid: 9b4b8642cdcebf0408252484a7dadaa0,
+        type: 3}
+      propertyPath: action1
+      value: 
+      objectReference: {fileID: 1412944104}
     - target: {fileID: 6474727469857551053, guid: 9b4b8642cdcebf0408252484a7dadaa0,
         type: 3}
       propertyPath: m_IsTrigger

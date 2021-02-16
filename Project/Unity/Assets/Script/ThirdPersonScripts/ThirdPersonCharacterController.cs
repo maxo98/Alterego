@@ -19,6 +19,8 @@ namespace Script.ThirdPersonScripts
         [SerializeField] private float characterDashForce;
         [SerializeField] private float fallMultiplier;
 
+        [SerializeField] private CharacterSkill action1;
+
         private bool _jumping;
         private bool _dashing;
         private Vector3 _jumpIntent;
@@ -56,6 +58,12 @@ namespace Script.ThirdPersonScripts
         public void OnCharacterJump()
         {
             _jumping = true;
+        }
+
+        public void OnCharacterAction1()
+        {
+            Debug.Log("action1 used");
+            action1.Use();
         }
 
         // Update is called once per frame
