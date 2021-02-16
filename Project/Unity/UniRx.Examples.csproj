@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C39AE5C6-576B-8B78-B3A0-1A3AB1AE666F}</ProjectGuid>
+    <ProjectGuid>{CA847F7B-E170-528C-7612-03AD831F66D2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>UniRx.Examples</AssemblyName>
@@ -261,7 +261,7 @@
       <HintPath>H:/2019.4.13f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>H:/Projet Annuel/Projet Annuel/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>H:/Github/AlterEgo/Alterego/Project/Unity/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>H:/2019.4.13f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -609,21 +609,21 @@
       <HintPath>H:/2019.4.13f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>H:/Projet Annuel/Projet Annuel/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>H:/Github/AlterEgo/Alterego/Project/Unity/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>H:/Projet Annuel/Projet Annuel/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>H:/Github/AlterEgo/Alterego/Project/Unity/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>H:/Projet Annuel/Projet Annuel/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>H:/Github/AlterEgo/Alterego/Project/Unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>H:/Projet Annuel/Projet Annuel/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>H:/Github/AlterEgo/Alterego/Project/Unity/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UniRx.csproj">
-      <Project>{F48F148A-210E-A235-DD56-1BBA9E061EAA}</Project>
+      <Project>{4C586F6F-2E08-11BA-83D0-F0219DC72408}</Project>
       <Name>UniRx</Name>
     </ProjectReference>
   </ItemGroup>
