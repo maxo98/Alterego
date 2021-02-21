@@ -8,20 +8,17 @@ namespace Script.ThirdPersonScripts
     {
         [SerializeField] private BoxCollider rangeCollider;
 
-        private bool _actionUsed = false;
+        protected bool ActionUsed = false;
 
         public void Use()
         {
-            _actionUsed = true;
+            ActionUsed = true;
         }
 
-        private void OnCollisionStay(Collision other)
+        public virtual void OnCollisionStay(Collision other)
         {
-            var enemy = other.gameObject;
-            if (_actionUsed && enemy.CompareTag($"enemy"))
-            {
-                Debug.Log("enemy touched");
-            }
+            Debug.Log("skill used");
         }
+        
     }
 }

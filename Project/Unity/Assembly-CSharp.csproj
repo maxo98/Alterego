@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\ThirdPersonScripts\CharacterSkill.cs" />
+     <Compile Include="Assets\Script\ThirdPersonScripts\Skill1.cs" />
      <Compile Include="Assets\Script\ThirdPersonScripts\ThirdPersonAnimationManager.cs" />
      <Compile Include="Assets\Script\ThirdPersonScripts\ThirdPersonCameraController.cs" />
      <Compile Include="Assets\Script\ThirdPersonScripts\ThirdPersonCharacterController.cs" />

@@ -9,6 +9,7 @@
         <e p="Script" t="Include">
           <e p="ThirdPersonScripts" t="Include">
             <e p="CharacterSkill.cs" t="Include" />
+            <e p="Skill1.cs" t="Include" />
             <e p="ThirdPersonAnimationManager.cs" t="Include" />
             <e p="ThirdPersonCameraController.cs" t="Include" />
             <e p="ThirdPersonCharacterController.cs" t="Include" />

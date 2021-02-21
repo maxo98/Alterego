@@ -462,12 +462,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 5893086146454135881}
-  playerRigidbody: {fileID: 0}
+  playerRigidbody: {fileID: 5893086146454135880}
   cameraTransform: {fileID: 5893086146179705079}
   combatController: {fileID: 5893086147782299630}
   animationManager: {fileID: 104521767395979683}
-  characterSpeed: 5
-  characterJumpSpeed: 0
+  characterSpeed: 2
+  characterJumpSpeed: 20
+  characterDashForce: 100
+  fallMultiplier: 10
+  action1: {fileID: 0}
 --- !u!114 &5893086147782299625
 MonoBehaviour:
   m_ObjectHideFlags: 0
