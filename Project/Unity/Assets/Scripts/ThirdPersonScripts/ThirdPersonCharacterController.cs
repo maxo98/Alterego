@@ -1,28 +1,32 @@
-﻿using TMPro;
+﻿using Script.ThirdPersonScripts;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Script.ThirdPersonScripts
+namespace ThirdPersonScripts
 {
     public class ThirdPersonCharacterController : MonoBehaviour
     {
-
         [SerializeField] private Transform playerTransform;
         [SerializeField] private Rigidbody playerRigidbody;
         [SerializeField] private Transform cameraTransform;
 
-        [SerializeField] private ThirdPersonCombatController combatController;
         [SerializeField] private ThirdPersonAnimationManager animationManager;
         
         [SerializeField] private float characterSpeed;
         [SerializeField] private float characterJumpSpeed;
-        [SerializeField] private float characterDashForce;
         [SerializeField] private float fallMultiplier;
+        [SerializeField] private float characterDashForce;
+        [SerializeField] private int jumpAmount;
+        [SerializeField] private float dashCooldown;
 
         [SerializeField] private CharacterSkill action1;
 
         private bool _jumping;
+        private int _jumpCount;
+        private bool _canJump;
         private bool _dashing;
+        private bool _canDash = true;
+        private float _dashCurrentCooldown;
         private Vector3 _jumpIntent;
         private Vector3 _directionIntent;
         private Vector3 _rotationIntent;
@@ -30,7 +34,7 @@ namespace Script.ThirdPersonScripts
         private void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            Cursor.visible = true;
         }
 
         public void OnCharacterMovement(InputValue inputs)
@@ -53,12 +57,22 @@ namespace Script.ThirdPersonScripts
 
         public void OnCharacterDash()
         {
+            if (!_canDash) return;
             _dashing = true;
+            _canDash = false;
+            _dashCurrentCooldown = dashCooldown;
+
         }
 
         public void OnCharacterJump()
         {
+            if (!_canJump || _jumpCount >= jumpAmount) return;
             _jumping = true;
+            _jumpCount++;
+            if (_jumpCount == jumpAmount)
+            {
+                _canJump = false;
+            }
         }
         
         public void OnCharacterAction1()
@@ -67,7 +81,26 @@ namespace Script.ThirdPersonScripts
             action1.Use();
         }
 
+        public void ProcessPlayerTouchedGround()
+        {
+            if (_canJump) return;
+            _canJump = true;
+            _jumpCount = 0;
+        }
 
+        private void Update()
+        {
+            if (!_canDash)
+            {
+                _dashCurrentCooldown -= Time.deltaTime;
+                if (_dashCurrentCooldown <= 0)
+                {
+                    _canDash = true;
+                }
+            }
+            
+        }
+        
         // Update is called once per frame
         private void FixedUpdate()
         {

@@ -1,53 +1,46 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-public class BasicEnemyBahaviour : MonoBehaviour
+namespace Enemy
 {
-    public Transform player;
-    public float speed = 4f;
-    private Rigidbody rb;
-
-    public bool isCloseEnought;
-    public float range = 20f;
-
-    public NavMeshAgent agent;
-
-    private void Awake()
+    public class BasicEnemyBahaviour : MonoBehaviour
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        rb = this.GetComponent<Rigidbody>();
-        agent = this.GetComponent<NavMeshAgent>();
-    }
+        [SerializeField] private Transform playerTransform;
 
+        public bool playerInRange;
+        public float range = 20f;
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, range);
-    }
+        public NavMeshAgent agent;
 
-    private void Update()
-    {
-        CheckDistanceToPlayer();
-        if (isCloseEnought)
+        private void Awake()
         {
-            Chasing();
+            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+            agent = GetComponent<NavMeshAgent>();
         }
-    }
 
-    public void CheckDistanceToPlayer()
-    {
-        Debug.Log("Analysing");
-        float _distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        if (_distanceToPlayer < range)
+
+        private void OnDrawGizmosSelected()
         {
-            isCloseEnought = true;
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, range);
         }
-    }
 
-    public void Chasing()
-    {
-        Debug.Log("Chasing");
-        agent.SetDestination(player.position);
+        private void Update()
+        {
+            if (playerInRange)
+            {
+                Chasing();
+            }
+        }
+
+        public void PlayerEnteredRange()
+        {
+            playerInRange = true;
+        }
+
+        public void Chasing()
+        {
+            agent.SetDestination(playerTransform.position);
+        }
     }
 }

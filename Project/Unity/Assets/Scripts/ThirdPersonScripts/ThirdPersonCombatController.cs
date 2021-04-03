@@ -14,7 +14,7 @@ namespace Script.ThirdPersonScripts
         [SerializeField] private ThirdPersonAnimationManager animationManager;
 
         public int PlayerClicks { get; set; }
-        public bool IsAttacking { get; private set; }
+        private bool IsAttacking { get; set; }
         private float _lastTimeClicked;
 
         private void Start()

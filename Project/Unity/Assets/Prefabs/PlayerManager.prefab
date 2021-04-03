@@ -261,6 +261,77 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.7444956}
   m_Center: {x: 0, y: 0, z: 0.12775503}
+--- !u!1 &4938395018821380727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 689803882524751048}
+  - component: {fileID: 5206549766191334493}
+  - component: {fileID: 1891476399206879846}
+  m_Layer: 0
+  m_Name: groundDetection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &689803882524751048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4938395018821380727}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5893086146454135881}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5206549766191334493
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4938395018821380727}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.1, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1891476399206879846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4938395018821380727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5d3afa573c93c40abf0a09af1b56e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerGroundDetected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5893086147782299631}
+        m_MethodName: ProcessPlayerTouchedGround
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5893086146179705074
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +447,7 @@ Transform:
   - {fileID: 7840675968536273718}
   - {fileID: 5893086146831995831}
   - {fileID: 63253863}
+  - {fileID: 689803882524751048}
   m_Father: {fileID: 5893086147782299626}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -453,6 +525,7 @@ GameObject:
   - component: {fileID: 5893086147782299631}
   - component: {fileID: 5893086147782299625}
   - component: {fileID: 5893086147782299630}
+  - component: {fileID: 277868923988223164}
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Player
@@ -540,12 +613,13 @@ MonoBehaviour:
   playerTransform: {fileID: 5893086146454135881}
   playerRigidbody: {fileID: 5893086146454135880}
   cameraTransform: {fileID: 5893086146179705079}
-  combatController: {fileID: 5893086147782299630}
   animationManager: {fileID: 104521767395979683}
   characterSpeed: 2
   characterJumpSpeed: 20
-  characterDashForce: 100
   fallMultiplier: 10
+  characterDashForce: 100
+  jumpAmount: 2
+  dashCooldown: 3
   action1: {fileID: 1412944104}
 --- !u!114 &5893086147782299625
 MonoBehaviour:
@@ -581,6 +655,26 @@ MonoBehaviour:
   maxComboAttack: 2
   weapon: {fileID: 444873518481091595}
   animationManager: {fileID: 104521767395979683}
+--- !u!114 &277868923988223164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5893086147782299627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30887e5aaddfe7041b603ff9b75619ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitalityIncrement: 40
+  baseVitality: 100
+  defenseIncrement: 0.75
+  baseDefense: 0.1
+  dexterityIncrement: 0.35
+  baseDexterity: 0.05
+  velocityIncrement: 0.12
+  damageBonusIncrement: 0.04
 --- !u!1 &7505113493020126131
 GameObject:
   m_ObjectHideFlags: 0
