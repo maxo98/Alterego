@@ -1,24 +1,19 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Enemy
 {
     public class EnemiesPackRangeDetection : MonoBehaviour
     {
-        private readonly List<GameObject> _enemyList = new List<GameObject>();
+        [SerializeField] private List<EnemyBehaviour> enemyList = new List<EnemyBehaviour>();
 
         private void OnTriggerEnter(Collider col)
         {
-            if (col.gameObject.CompareTag("enemy"))
+            if (!col.gameObject.CompareTag("Player")) return;
+            foreach (var enemy in enemyList)
             {
-                _enemyList.Add(col.gameObject);
-            }
-            else if(col.gameObject.CompareTag("Player"))
-            {
-                foreach (var enemy in _enemyList)
-                {
-                    enemy.GetComponent<BasicEnemyBahaviour>().PlayerEnteredRange();
-                }
+                enemy.PlayerEnteredRange();
             }
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Script.ThirdPersonScripts;
+using Skills;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,7 +20,7 @@ namespace ThirdPersonScripts
         [SerializeField] private int jumpAmount;
         [SerializeField] private float dashCooldown;
 
-        [SerializeField] private CharacterSkill action1;
+
 
         private bool _jumping;
         private int _jumpCount;
@@ -78,7 +79,7 @@ namespace ThirdPersonScripts
         public void OnCharacterAction1()
         {
             Debug.Log("action1 used");
-            action1.Use();
+            //action1.Use();
         }
 
         public void ProcessPlayerTouchedGround()

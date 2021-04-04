@@ -3,11 +3,12 @@ using UnityEngine;
 
 namespace ThirdPersonScripts
 {
+    
+    public enum Statistic {Vitality, Defense, Dexterity, Velocity, DamageBonus}
+    
     public class CharacterStatistic : MonoBehaviour
     {
         
-        public enum Statistic {Vitality, Defense, Dexterity, Velocity, DamageBonus}
-
         private Statistic _statistics;
         
         public int Vitality { get; private set; }

@@ -1215,20 +1215,31 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Enemy" t="Include">
-            <e p="BasicEnemyBahaviour.cs" t="Include" />
+            <e p="BasicEnemyBehaviour.cs" t="Include" />
             <e p="BossDefeated.cs" t="Include" />
             <e p="DamageDealing.cs" t="Include" />
             <e p="EnemiesPackRangeDetection.cs" t="Include" />
+            <e p="EnemyBehaviour.cs" t="Include" />
             <e p="EnemyHealth.cs" t="Include" />
           </e>
+          <e p="Skills" t="Include">
+            <e p="CircularSlash.cs" t="Include" />
+            <e p="DefaultSkill.cs" t="Include" />
+            <e p="EnemiesFlash.cs" t="Include" />
+            <e p="EnemiesPull.cs" t="Include" />
+            <e p="EnemiesStun.cs" t="Include" />
+            <e p="LunarSlash.cs" t="Include" />
+            <e p="Skill.cs" t="Include" />
+            <e p="SwordThrowing.cs" t="Include" />
+          </e>
           <e p="ThirdPersonScripts" t="Include">
-            <e p="CharacterSkill.cs" t="Include" />
             <e p="CharacterStatistic.cs" t="Include" />
-            <e p="Skill1.cs" t="Include" />
+            <e p="SkillsManager.cs" t="Include" />
             <e p="ThirdPersonAnimationManager.cs" t="Include" />
             <e p="ThirdPersonCameraController.cs" t="Include" />
             <e p="ThirdPersonCharacterController.cs" t="Include" />
             <e p="ThirdPersonCombatController.cs" t="Include" />
+            <e p="ThirdPersonSkillsController.cs" t="Include" />
             <e p="Weapon.cs" t="Include" />
           </e>
           <e p="Triggers" t="Include">

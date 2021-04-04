@@ -58,18 +58,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Enemy\BasicEnemyBahaviour.cs" />
+     <Compile Include="Assets\Scripts\Enemy\BasicEnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\Enemy\BossDefeated.cs" />
      <Compile Include="Assets\Scripts\Enemy\DamageDealing.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemiesPackRangeDetection.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
-     <Compile Include="Assets\Scripts\ThirdPersonScripts\CharacterSkill.cs" />
+     <Compile Include="Assets\Scripts\Skills\CircularSlash.cs" />
+     <Compile Include="Assets\Scripts\Skills\DefaultSkill.cs" />
+     <Compile Include="Assets\Scripts\Skills\EnemiesFlash.cs" />
+     <Compile Include="Assets\Scripts\Skills\EnemiesPull.cs" />
+     <Compile Include="Assets\Scripts\Skills\EnemiesStun.cs" />
+     <Compile Include="Assets\Scripts\Skills\LunarSlash.cs" />
+     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
+     <Compile Include="Assets\Scripts\Skills\SwordThrowing.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\CharacterStatistic.cs" />
-     <Compile Include="Assets\Scripts\ThirdPersonScripts\Skill1.cs" />
+     <Compile Include="Assets\Scripts\ThirdPersonScripts\SkillsManager.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\ThirdPersonAnimationManager.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\ThirdPersonCameraController.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\ThirdPersonCharacterController.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\ThirdPersonCombatController.cs" />
+     <Compile Include="Assets\Scripts\ThirdPersonScripts\ThirdPersonSkillsController.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\Weapon.cs" />
      <Compile Include="Assets\Scripts\Triggers\TriggerGroundDetectedEventDispatcher.cs" />
      <Compile Include="Assets\Scripts\UI\LevelLoader.cs" />
