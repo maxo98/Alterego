@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using ThirdPersonScripts;
+using UnityEngine;
 
 namespace Script.ThirdPersonScripts
 {

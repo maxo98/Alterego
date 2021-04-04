@@ -60,8 +60,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Enemy\BasicEnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\Enemy\BossDefeated.cs" />
-     <Compile Include="Assets\Scripts\Enemy\DamageDealing.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemiesPackRangeDetection.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\Environnement\Destroyer.cs" />
@@ -77,6 +77,7 @@
      <Compile Include="Assets\Scripts\Skills\LunarSlash.cs" />
      <Compile Include="Assets\Scripts\Skills\Skill.cs" />
      <Compile Include="Assets\Scripts\Skills\SwordThrowing.cs" />
+     <Compile Include="Assets\Scripts\ThirdPersonScripts\CharacterAutoAttacks.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\CharacterStatistic.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\SkillsManager.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\ThirdPersonAnimationManager.cs" />
@@ -84,7 +85,6 @@
      <Compile Include="Assets\Scripts\ThirdPersonScripts\ThirdPersonCharacterController.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\ThirdPersonCombatController.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\ThirdPersonSkillsController.cs" />
-     <Compile Include="Assets\Scripts\ThirdPersonScripts\Weapon.cs" />
      <Compile Include="Assets\Scripts\Triggers\TriggerGroundDetectedEventDispatcher.cs" />
      <Compile Include="Assets\Scripts\UI\LevelLoader.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenu.cs" />

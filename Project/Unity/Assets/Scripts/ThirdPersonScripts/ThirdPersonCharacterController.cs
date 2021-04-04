@@ -20,8 +20,6 @@ namespace ThirdPersonScripts
         [SerializeField] private int jumpAmount;
         [SerializeField] private float dashCooldown;
 
-
-
         private bool _jumping;
         private int _jumpCount;
         private bool _canJump;
@@ -74,12 +72,6 @@ namespace ThirdPersonScripts
             {
                 _canJump = false;
             }
-        }
-        
-        public void OnCharacterAction1()
-        {
-            Debug.Log("action1 used");
-            //action1.Use();
         }
 
         public void ProcessPlayerTouchedGround()

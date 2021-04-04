@@ -1217,10 +1217,17 @@
           <e p="Enemy" t="Include">
             <e p="BasicEnemyBehaviour.cs" t="Include" />
             <e p="BossDefeated.cs" t="Include" />
-            <e p="DamageDealing.cs" t="Include" />
             <e p="EnemiesPackRangeDetection.cs" t="Include" />
+            <e p="EnemyAttack.cs" t="Include" />
             <e p="EnemyBehaviour.cs" t="Include" />
             <e p="EnemyHealth.cs" t="Include" />
+          </e>
+          <e p="Environnement" t="Include">
+            <e p="Destroyer.cs" t="Include" />
+            <e p="RoomCount.cs" t="Include" />
+            <e p="RoomManager.cs" t="Include" />
+            <e p="RoomSpawner.cs" t="Include" />
+            <e p="RoomTemplates.cs" t="Include" />
           </e>
           <e p="Skills" t="Include">
             <e p="CircularSlash.cs" t="Include" />
@@ -1233,6 +1240,7 @@
             <e p="SwordThrowing.cs" t="Include" />
           </e>
           <e p="ThirdPersonScripts" t="Include">
+            <e p="CharacterAutoAttacks.cs" t="Include" />
             <e p="CharacterStatistic.cs" t="Include" />
             <e p="SkillsManager.cs" t="Include" />
             <e p="ThirdPersonAnimationManager.cs" t="Include" />
@@ -1240,7 +1248,6 @@
             <e p="ThirdPersonCharacterController.cs" t="Include" />
             <e p="ThirdPersonCombatController.cs" t="Include" />
             <e p="ThirdPersonSkillsController.cs" t="Include" />
-            <e p="Weapon.cs" t="Include" />
           </e>
           <e p="Triggers" t="Include">
             <e p="TriggerGroundDetectedEventDispatcher.cs" t="Include" />

@@ -1,0 +1,6 @@
+-génération de niveau aléatoire
+-implémentation du système de statistique
+-implémentation du système de compétences
+-système de "pack" pour les enemies avec zone de détéction pour un groupe
+-réimplémentation de la gestion des degats pour le joueur (reste a gerer les animations)
+-début d'implémentation des degats coté enemies

@@ -51,9 +51,9 @@ public class EnemyHealth : MonoBehaviour
         return health / maxHealth;
     }
 
-    public void DoDamage(float _dmg)
+    public void DoDamage(float dmg)
     {
-        health -= _dmg;
+        health -= dmg;
         StartCoroutine(WaitAfterDealingDamage());
     }
 
