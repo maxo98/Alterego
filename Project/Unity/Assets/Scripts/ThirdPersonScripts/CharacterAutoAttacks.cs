@@ -12,31 +12,29 @@ namespace ThirdPersonScripts
         private bool _activated;
         private float _currentAttackDuration;
         private float _attackDamage;
-        private void OnTriggerStay(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
             if (!_activated) return;
-            Debug.Log("SLASH");
             var enemy = other.gameObject;
             if (!enemy.CompareTag("enemy")) return;
+            Debug.Log("SLASH");
             var enemyRb = enemy.GetComponent<Rigidbody>();
             var direction = player.transform.position - other.transform.position;
             direction.y = 0;
             AddDamage(enemy);
-            enemyRb.AddForce(direction.normalized * -300, ForceMode.Force);
+            enemyRb.AddForce(direction.normalized * -100, ForceMode.Force);
         }
 
         private void Update()
         {
-            if (_activated)
+            if (!_activated) return;
+            if (_currentAttackDuration <= 0)
             {
-                if (_currentAttackDuration <= 0)
-                {
-                    _activated = false;
-                }
-                else
-                {
-                    _currentAttackDuration -= Time.deltaTime;
-                }
+                _activated = false;
+            }
+            else
+            {
+                _currentAttackDuration -= Time.deltaTime;
             }
         }
 

@@ -8,7 +8,7 @@ namespace Skills
     {
 
         [SerializeField] private float skillDamage;
-        
+
         public override SkillsEnum GetSkillName()
         {
             return SkillsEnum.SwordThrowing;
@@ -23,5 +23,6 @@ namespace Skills
         {
             throw new System.NotImplementedException();
         }
+
     }
 }

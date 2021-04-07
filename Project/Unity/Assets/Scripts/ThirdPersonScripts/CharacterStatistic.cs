@@ -10,27 +10,32 @@ namespace ThirdPersonScripts
     {
         
         private Statistic _statistics;
-        
-        public int Vitality { get; private set; }
+
+        [SerializeField] private int vitality;
         [SerializeField] private float vitalityIncrement;
         [SerializeField] private float baseVitality;
-        public int Defense { get; private set; }
+        [SerializeField] private int defense;
         [SerializeField] private float defenseIncrement;
         [SerializeField] private float baseDefense;
-        public int Dexterity { get; private set; }
+        [SerializeField] private int dexterity;
         [SerializeField] private float dexterityIncrement;
         [SerializeField] private float baseDexterity;
-        public int Velocity { get; private set; }
+        [SerializeField] private int velocity;
         [SerializeField] private float velocityIncrement;
-        public int DamageBonus { get; private set; }
+        [SerializeField] private int damageBonus;
         [SerializeField] private float damageBonusIncrement;
 
-        public float PlayerHealthPoint { get; private set; }
-        
+        private float _playerHealthPoint;
+
+        private void Start()
+        {
+            _playerHealthPoint = GetVitality();
+        }
+
         //current player vitality
         public float GetVitality()
         {
-            return baseVitality + vitalityIncrement * Vitality;
+            return baseVitality + vitalityIncrement * vitality;
         }
 
         //current player vitality rounded
@@ -42,7 +47,7 @@ namespace ThirdPersonScripts
         //current player defense
         public float GetDefense()
         {
-            return Defense == 1 ? baseDefense : Mathf.Log(Defense) * defenseIncrement;
+            return defense == 1 ? baseDefense : Mathf.Log(defense) * defenseIncrement;
         }
 
         //current player defense rounded
@@ -54,7 +59,7 @@ namespace ThirdPersonScripts
         //current player dexterity
         public float GetDexterity()
         {
-            return Mathf.Log(Dexterity) * dexterityIncrement + baseDexterity;
+            return Mathf.Log(dexterity) * dexterityIncrement + baseDexterity;
         }
 
         //current player dexterity rounded
@@ -66,7 +71,7 @@ namespace ThirdPersonScripts
         //current player velocity
         public float GetVelocity()
         {
-            return Velocity * velocityIncrement;
+            return velocity * velocityIncrement;
         }
 
         //current player velocity rounded
@@ -78,7 +83,7 @@ namespace ThirdPersonScripts
         //current player bonus damage
         public float GetDamageBonus()
         {
-            return DamageBonus * damageBonusIncrement;
+            return damageBonus * damageBonusIncrement;
         }
         
         //level up statistic
@@ -87,19 +92,19 @@ namespace ThirdPersonScripts
             switch (stat)
             {
                 case Statistic.Vitality:
-                    Vitality++;
+                    vitality++;
                     break;
                 case Statistic.Defense:
-                    Defense++;
+                    defense++;
                     break;
                 case Statistic.Dexterity:
-                    Dexterity++;
+                    dexterity++;
                     break;
                 case Statistic.Velocity:
-                    Velocity++;
+                    velocity++;
                     break;
                 case Statistic.DamageBonus:
-                    DamageBonus++;
+                    damageBonus++;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(stat), stat, null);
@@ -109,13 +114,14 @@ namespace ThirdPersonScripts
         //player take damages
         public void PlayerDamaged(float damages)
         {
-            PlayerHealthPoint -= damages;
+            _playerHealthPoint -= damages;
+            Debug.Log("player took damage : " + _playerHealthPoint);
         }
 
         //player receive heals
         public void PlayerHealed(float heals)
         {
-            PlayerHealthPoint += heals;
+            _playerHealthPoint += heals;
         }
     }
     

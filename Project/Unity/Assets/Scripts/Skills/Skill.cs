@@ -9,40 +9,38 @@ namespace Skills
     {
         [SerializeField] private float attackDuration;
         
-        private bool _used;
+        protected bool Used;
         private float _currentAttackDuration;
         
         public abstract SkillsEnum GetSkillName();
 
-        public void OnCollisionStay(Collision other)
+        public void OnTriggerStay(Collider other)
         {
-            if (!_used) return;
+            if (!Used) return;
             var enemy = other.gameObject;
             if (!enemy.CompareTag("enemy")) return;
             Debug.Log("enemy in range of the skill");
             Action(enemy);
-            _used = false;
+            Used = false;
         }
         
         private void Update()
         {
-            if (_used)
+            if (!Used) return;
+            if (_currentAttackDuration <= 0)
             {
-                if (_currentAttackDuration <= 0)
-                {
-                    _used = false;
-                }
-                else
-                {
-                    _currentAttackDuration -= Time.deltaTime;
-                }
+                Used = false;
+            }
+            else
+            {
+                _currentAttackDuration -= Time.deltaTime;
             }
         }
 
         public void ActivateSkill()
         {
-            _used = true;
             _currentAttackDuration = attackDuration;
+            Used = true;
             //StartAnimation();
         }
 
