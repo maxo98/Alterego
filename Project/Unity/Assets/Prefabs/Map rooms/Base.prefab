@@ -17,7 +17,7 @@ GameObject:
   m_TagString: EnvSpawnPoint
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5104907574805542857
 Transform:
@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomNeeded: 0
+  templates: {fileID: 0}
+  closedRoom: {fileID: 0}
   rand: 0
   spawned: 0
 --- !u!65 &2137309376759513195
@@ -95,7 +97,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &974502709477616205
 Transform:

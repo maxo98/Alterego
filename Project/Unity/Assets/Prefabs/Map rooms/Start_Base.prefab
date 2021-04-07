@@ -46,8 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomNeeded: 1
-  templates: {fileID: 0}
-  closedRoom: {fileID: 0}
+  templates: {fileID: 4907191060585901836, guid: dc648a7308a38ee4f828fd572b6fe78b,
+    type: 3}
+  closedRoom: {fileID: 822533975239630058, guid: 4f9d9a56762309643ad3b882568ced24,
+    type: 3}
   rand: 0
   spawned: 0
 --- !u!65 &4871127990976852647
@@ -125,8 +127,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomNeeded: 0
-  templates: {fileID: 0}
-  closedRoom: {fileID: 0}
+  templates: {fileID: 4907191060585901836, guid: dc648a7308a38ee4f828fd572b6fe78b,
+    type: 3}
+  closedRoom: {fileID: 822533975239630058, guid: 4f9d9a56762309643ad3b882568ced24,
+    type: 3}
   rand: 0
   spawned: 0
 --- !u!65 &7559955578813360811
@@ -204,8 +208,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomNeeded: 3
-  templates: {fileID: 0}
-  closedRoom: {fileID: 0}
+  templates: {fileID: 4907191060585901836, guid: dc648a7308a38ee4f828fd572b6fe78b,
+    type: 3}
+  closedRoom: {fileID: 822533975239630058, guid: 4f9d9a56762309643ad3b882568ced24,
+    type: 3}
   rand: 0
   spawned: 0
 --- !u!65 &5145426750573333166
@@ -368,7 +374,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1941936418147154764
 Transform:
@@ -5111,8 +5117,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomNeeded: 2
-  templates: {fileID: 0}
-  closedRoom: {fileID: 0}
+  templates: {fileID: 4907191060585901836, guid: dc648a7308a38ee4f828fd572b6fe78b,
+    type: 3}
+  closedRoom: {fileID: 822533975239630058, guid: 4f9d9a56762309643ad3b882568ced24,
+    type: 3}
   rand: 0
   spawned: 0
 --- !u!65 &2087003439989693672
@@ -5494,6 +5502,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyDetectionRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106627343244941354, guid: 91889bebc806b27449a7c4a484caf170,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91889bebc806b27449a7c4a484caf170, type: 3}
