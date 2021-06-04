@@ -122,6 +122,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: fc536b7fb04c8c34abd7f22533a21081, type: 2}
+--- !u!95 &198503320 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7313784613459895866, guid: 9b4b8642cdcebf0408252484a7dadaa0,
+    type: 3}
+  m_PrefabInstance: {fileID: 352952658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &352952658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -199,6 +205,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 5893086147782299630, guid: 9b4b8642cdcebf0408252484a7dadaa0,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 198503320}
     - target: {fileID: 9147411114471207495, guid: 9b4b8642cdcebf0408252484a7dadaa0,
         type: 3}
       propertyPath: m_IsTrigger
@@ -474,7 +485,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3782
+  m_Name: pb_Mesh-2970
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
