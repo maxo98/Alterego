@@ -1,7 +1,6 @@
-﻿using ThirdPersonScripts;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Script.ThirdPersonScripts
+namespace ThirdPersonScripts
 {
     public class ThirdPersonAnimationManager : MonoBehaviour
     {
