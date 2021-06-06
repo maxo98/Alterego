@@ -20,34 +20,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="519cae2e-861d-4a43-966e-ba7118c4a093" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Character Animations/AnimationEnd.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Character Animations/AnimationEnd.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Character Animations/CharacterAnimationController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Character Animations/CharacterAnimationController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Character Animations/HeavyAttack01.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Character Animations/HeavyAttack01.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Character Animations/HeavyAttack02.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Character Animations/HeavyAttack02.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Character Animations/HeavyAttack03.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Character Animations/HeavyAttack03.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Character Animations/LightAttack01.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Character Animations/LightAttack01.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Character Animations/LightAttack02.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Character Animations/LightAttack02.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Character Animations/PlayerManager.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Character Animations/PlayerManager.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Inputs/PlayerControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inputs/PlayerControls.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Character Animations/LightAttack03.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Character Animations/LightAttack03.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/ThirdPersonAnimationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/ThirdPersonAnimationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicEnemyBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicEnemyBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemiesPackRangeDetection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemiesPackRangeDetection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/CharacterAutoAttacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/CharacterAutoAttacks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/ThirdPersonAnimationManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/ThirdPersonAnimationManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/ThirdPersonCharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/ThirdPersonCharacterController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/ThirdPersonCombatController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/ThirdPersonCombatController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/2f/2f8cfc6b6778fc09931b11f3c888160e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/2e/2e3092f351c91c2a65bcd2b6be5f24c3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3c/3cc97484b59749690244b0d91b7230f6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3d/3d795980a39c88b462e9d2136f5ea7de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/48/486825bab951f4f16b287d864e7eff48" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/4f/4f01ba80549a8a2eb707e47abe6c6ec9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/4f/4f2d64fbc4304893ba9863ad43f45fe9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/55/5512f53814f7fbbdb0320f19a53c42c4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/62/62011d28fac579f8dd18f8b9bd0358e7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6c/6c0b0b5cb36258794949d7fb9c4d2aec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/a4/a443d34f9f3aa7d24e54f9107fc8e454" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/b4/b4a6823c3af93c13cee7c3ee68eda1b2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d2/d28bd02e7c78870993b149ba5c625d31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e0/e0a8ee8b8971283782d332ef3e3527f2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e3/e373168c02793ba262d77666d34f78bf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e8/e8228c2fa1a698fe8b4d3fee0cf4eef7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e8/e8b3162acc15de24ffdd52f8eeaac663" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1dc091-7f565f308fdaf8748b.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1dc091-7f565f308fdaf8748b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1dc091-9b4b8642cdcebf0408.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1dc091-9b4b8642cdcebf0408.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1dc091-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1dc091-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/1df171-7f565f308fdaf8748b.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/1df171-7f565f308fdaf8748b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/1df171-9b4b8642cdcebf0408.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/1df171-9b4b8642cdcebf0408.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/1df171-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/1df171-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe4.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe6.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe6.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe7.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe7.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Zenject-TestFramework.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Zenject-TestFramework.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Zenject.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Zenject.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,14 +90,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Triggers/TriggerEnemiesInBoundEventDispatcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicEnemyBahaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/IEnemyBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemiesPackRangeDetection.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicEnemyBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/CharacterSkill.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/Skill1.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/Skill.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/CharacterSkills.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/ThirdPersonCharacterController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/AutoAttacks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/SkillsManager.cs" />
@@ -90,11 +107,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/CharacterStatistic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/ThirdPersonSkillsController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/CharacterAutoAttacks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/SwordThrowing.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Skill.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicEnemyBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemiesPackRangeDetection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/ThirdPersonAnimationManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/ThirdPersonCharacterController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/ThirdPersonCombatController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonScripts/CharacterAutoAttacks.cs" />
       </list>
     </option>
   </component>
@@ -162,6 +183,7 @@
       <workItem from="1617712265648" duration="7103000" />
       <workItem from="1617978392081" duration="1572000" />
       <workItem from="1622818868784" duration="3940000" />
+      <workItem from="1622897086515" duration="7646000" />
     </task>
     <servers />
   </component>
@@ -190,9 +212,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622818956518" />
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1617559774409">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1622901095653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1617559774409" />
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622901095653" />
   </component>
 </project>

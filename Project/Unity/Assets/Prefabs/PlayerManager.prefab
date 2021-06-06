@@ -215,7 +215,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 2.4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4530586025964122221
 MonoBehaviour:
@@ -230,8 +230,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5893086146454135882}
+  collider: {fileID: 9147411114471207495}
   autoAttackBaseDamage: 30
-  attackDuration: 0.7
+  attackDuration: 0.1
 --- !u!1 &4938395018821380727
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +587,8 @@ MonoBehaviour:
   playerTransform: {fileID: 5893086146454135881}
   playerRigidbody: {fileID: 5893086146454135880}
   cameraTransform: {fileID: 5893086146179705079}
-  animationManager: {fileID: 104521767395979683}
+  animator: {fileID: 7313784613459895866}
+  combatController: {fileID: 5893086147782299630}
   characterSpeed: 2
   characterJumpSpeed: 20
   fallMultiplier: 10
@@ -623,11 +625,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7bdf68007ffdf4fa636506a5edb236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  comboResetDelay: 1.5
-  maxComboAttack: 2
-  characterStatistic: {fileID: 277868923988223164}
-  characterAutoAttacks: {fileID: 4530586025964122221}
-  animationManager: {fileID: 104521767395979683}
+  maxCombo: 3
+  animator: {fileID: 7313784613459895866}
+  autoAttacks: {fileID: 4530586025964122221}
 --- !u!114 &277868923988223164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,7 +680,6 @@ GameObject:
   - component: {fileID: 4278351606616281077}
   - component: {fileID: 5269717384360559691}
   - component: {fileID: 7313784613459895866}
-  - component: {fileID: 104521767395979683}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -770,20 +769,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &104521767395979683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7505113493020126131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed3df52526cf4c808cd98edd85c290cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 7313784613459895866}
-  combatController: {fileID: 5893086147782299630}
 --- !u!1001 &6424377278561733182
 PrefabInstance:
   m_ObjectHideFlags: 0

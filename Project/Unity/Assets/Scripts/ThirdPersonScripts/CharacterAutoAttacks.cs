@@ -5,7 +5,7 @@ namespace ThirdPersonScripts
     public class CharacterAutoAttacks : MonoBehaviour
     {
         [SerializeField] private GameObject player;
-
+        [SerializeField] private Collider collider;
         [SerializeField] private float autoAttackBaseDamage;
         [SerializeField] private float attackDuration;
         
@@ -31,6 +31,7 @@ namespace ThirdPersonScripts
             if (_currentAttackDuration <= 0)
             {
                 _activated = false;
+                collider.enabled = false;
             }
             else
             {
@@ -41,6 +42,7 @@ namespace ThirdPersonScripts
         public void Activate(int comboHit)
         {
             _attackDamage = autoAttackBaseDamage * comboHit;
+            collider.enabled = true;
             _activated = true;
             _currentAttackDuration = attackDuration;
         }

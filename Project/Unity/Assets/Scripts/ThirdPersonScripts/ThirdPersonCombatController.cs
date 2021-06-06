@@ -18,11 +18,14 @@ namespace ThirdPersonScripts
 
     public class ThirdPersonCombatController : MonoBehaviour
     {
-        
-        public Animator animator;
+        [SerializeField] private int maxCombo = 3;
+        [SerializeField] private Animator animator;
+
+        [SerializeField] private CharacterAutoAttacks autoAttacks;
+        public bool IsAttacking { get; private set; }
         private static readonly int AnimationPlaying = Animator.StringToHash("AnimationPlaying");
-        private bool _lightAttackInput = false;
-        private bool _heavyAttackInput = false;
+        private bool _lightAttackIntent;
+        private bool _heavyAttackIntent;
 
         private void Start()
         {
@@ -37,12 +40,16 @@ namespace ThirdPersonScripts
             var lastAnimationRegistered = new ReactiveProperty<AnimationType?>(null);
 
             var animationTypeStream = Observable.EveryUpdate()
-                .Where(_ => _lightAttackInput || _heavyAttackInput)
+                .Where(_ => _lightAttackIntent || _heavyAttackIntent)
                 .Where(_ => readyToReceiveCombo.Value)
                 .Select(_ =>
                 {
-                    if (_lightAttackInput)
+                    
+                    if (_lightAttackIntent)
                     {
+                        IsAttacking = true;
+                        _lightAttackIntent = false;
+                        _heavyAttackIntent = false;
                         switch (lastAnimationRegistered.Value)
                         {
                             case AnimationType.LightAttack1:
@@ -61,32 +68,43 @@ namespace ThirdPersonScripts
                         }
                     }
 
-                    if (!_heavyAttackInput) throw new Exception("This should not happen either");
-                    switch (lastAnimationRegistered.Value)
+                    if (_heavyAttackIntent)
                     {
-                        case AnimationType.LightAttack1:
-                        case AnimationType.HeavyAttack1:
-                            return AnimationType.HeavyAttack2;
-                        case AnimationType.LightAttack2:
-                        case AnimationType.HeavyAttack2:
-                            return AnimationType.HeavyAttack3;
-                        case AnimationType.LightAttack3:
-                        case AnimationType.HeavyAttack3:
-                            throw new Exception("This should not happen !");
-                        case null:
-                            return AnimationType.HeavyAttack1;
-                        default:
-                            throw new ArgumentOutOfRangeException();
+                        IsAttacking = true;
+                        _lightAttackIntent = false;
+                        _heavyAttackIntent = false;
+                        switch (lastAnimationRegistered.Value)
+                        {
+                            case AnimationType.LightAttack1:
+                            case AnimationType.HeavyAttack1:
+                                return AnimationType.HeavyAttack2;
+                            case AnimationType.LightAttack2:
+                            case AnimationType.HeavyAttack2:
+                                return AnimationType.HeavyAttack3;
+                            case AnimationType.LightAttack3:
+                            case AnimationType.HeavyAttack3:
+                                throw new Exception("This should not happen !");
+                            case null:
+                                return AnimationType.HeavyAttack1;
+                            default:
+                                throw new ArgumentOutOfRangeException();
+                        }
                     }
-
                     
+                    throw new Exception("This should not happen either");
+
+
                 });
                 
             var animationStream =
                 animationTypeStream
                     // .Do(_ => moveCompletedSubject.OnNext(Unit.Default))
                     .Do(last => lastAnimationRegistered.Value = last)
-                    .Do(_ => pendingMoves.Value += 1)
+                    .Do(_ =>
+                    {
+                        pendingMoves.Value += 1;
+                        autoAttacks.Activate(pendingMoves.Value);
+                    })
                     .Do(_ => leftMovesToComplete.Value += 1);
 
             var resetAnimationStream = animationFinishedStream.AsUnitObservable()
@@ -96,12 +114,15 @@ namespace ThirdPersonScripts
                 .Zip(resetAnimationStream.StartWith(Unit.Default), (type, unit) => type);
 
             pendingMoves
-                .Where(_ => pendingMoves.Value == 3)
+                .Where(_ => pendingMoves.Value == maxCombo)
                 .Subscribe(_ => readyToReceiveCombo.Value = false)
                 .AddTo(this);
 
             resetAnimationStream
-                .Subscribe(_ => leftMovesToComplete.Value -= 1)
+                .Subscribe(_ =>
+                {
+                    leftMovesToComplete.Value -= 1;
+                })
                 .AddTo(this);
 
             leftMovesToComplete
@@ -111,13 +132,12 @@ namespace ThirdPersonScripts
                     pendingMoves.Value = 0;
                     readyToReceiveCombo.Value = true;
                     lastAnimationRegistered.Value = null;
+                    IsAttacking = false;
                 })
                 .AddTo(this);
 
             animationOrderStream.Subscribe(anim =>
                 {
-                    _lightAttackInput = false;
-                    _heavyAttackInput = false;
                     animator.SetInteger(AnimationPlaying, (int) anim);
                     Debug.Log($"{Enum.GetName(typeof(AnimationType), anim)}");
                 })
@@ -126,12 +146,12 @@ namespace ThirdPersonScripts
         
         public void OnCharacterLightAttack()
         {
-            _lightAttackInput = true;
+            _lightAttackIntent = true;
         }
 
         public void OnCharacterHeavyAttack()
         {
-            _heavyAttackInput = true;
+            _heavyAttackIntent = true;
         }
     }
 }

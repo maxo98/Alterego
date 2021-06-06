@@ -541,8 +541,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cce73a7b564e13489a4c89998674736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 5993054850676920170}
   agent: {fileID: 761596182}
+  attackCooldown: 3
+  sightRange: 50
 --- !u!114 &2177171338097634623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,7 +642,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackBaseDamage: 10
   attackCooldown: 5
-  initialAttackCooldown: 2
 --- !u!135 &8817364133408341400
 SphereCollider:
   m_ObjectHideFlags: 0
