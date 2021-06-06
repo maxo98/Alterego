@@ -10,8 +10,9 @@ namespace ThirdPersonScripts
         [SerializeField] private Transform playerTransform;
         [SerializeField] private Rigidbody playerRigidbody;
         [SerializeField] private Transform cameraTransform;
-
-        [SerializeField] private ThirdPersonAnimationManager animationManager;
+        [SerializeField] private Animator animator;
+        
+        [SerializeField] private ThirdPersonCombatController combatController;
         
         [SerializeField] private float characterSpeed;
         [SerializeField] private float characterJumpSpeed;
@@ -29,6 +30,7 @@ namespace ThirdPersonScripts
         private Vector3 _jumpIntent;
         private Vector3 _directionIntent;
         private Vector3 _rotationIntent;
+        private static readonly int InputMagnitude = Animator.StringToHash("InputMagnitude");
 
         private void Start()
         {
@@ -49,7 +51,7 @@ namespace ThirdPersonScripts
             forward.Normalize();
             right.Normalize();
             
-            animationManager.CharacterAnimationMovement(values);
+            animator.SetFloat(InputMagnitude, new Vector3(values.x, 0, values.y).magnitude);
             
             _directionIntent = values.y * forward + values.x * right;
         }
@@ -97,10 +99,11 @@ namespace ThirdPersonScripts
         // Update is called once per frame
         private void FixedUpdate()
         {
-            /*if (combatController.IsAttacking)
+            if (combatController.IsAttacking)
             {
+                animator.SetFloat(InputMagnitude, 0f);
                 return;
-            }*/
+            }
 
             if (_jumping)
             {

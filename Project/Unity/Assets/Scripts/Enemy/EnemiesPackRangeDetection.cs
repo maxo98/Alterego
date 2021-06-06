@@ -13,6 +13,7 @@ namespace Enemy
             if (!col.gameObject.CompareTag("Player")) return;
             foreach (var enemy in enemyList)
             {
+                enemy.Player = col.gameObject;
                 enemy.PlayerEnteredRange();
             }
         }

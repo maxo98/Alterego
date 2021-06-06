@@ -80,7 +80,6 @@
      <Compile Include="Assets\Scripts\ThirdPersonScripts\CharacterAutoAttacks.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\CharacterStatistic.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\SkillsManager.cs" />
-     <Compile Include="Assets\Scripts\ThirdPersonScripts\ThirdPersonAnimationManager.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\ThirdPersonCameraController.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\ThirdPersonCharacterController.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonScripts\ThirdPersonCombatController.cs" />

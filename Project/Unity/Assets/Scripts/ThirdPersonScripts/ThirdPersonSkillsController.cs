@@ -11,7 +11,7 @@ namespace ThirdPersonScripts
         
         public void OnCharacterAction1()
         {
-            Debug.Log("action1 used" + action1.GetType());
+            Debug.Log("action1 used : " + action1.GetType());
             action1.ActivateSkill();
         }
 
