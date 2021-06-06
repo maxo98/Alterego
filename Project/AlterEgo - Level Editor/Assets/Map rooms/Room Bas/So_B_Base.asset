@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de435efe39c1d2246a13fd8f6df603e6, type: 3}
+  m_Name: So_B_Base
+  m_EditorClassIdentifier: 
+  prefabName: B_Base
+  image: {fileID: 21300000, guid: 86c779f7b54f3084a866dd835171976d, type: 3}
+  myType: 2
+  myPrefab: {fileID: 8667702232893590631, guid: 70fa1ed151e5ddc4a84646a3871413bb,
+    type: 3}
