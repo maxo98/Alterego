@@ -9,6 +9,7 @@ TagManager:
   - Rooms
   - Template
   - Closed
+  - BossRoom
   layers:
   - Default
   - TransparentFX
