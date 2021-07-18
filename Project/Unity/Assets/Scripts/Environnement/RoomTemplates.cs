@@ -89,6 +89,7 @@ public class RoomTemplates : MonoBehaviour
                 endBoss = true;
                 KillChildren(level);
                 level.GetComponent<NavMeshSurface>().BuildNavMesh();
+                RoomManager.instance.SpawnEnnemis();
             }
             else // On diminue le timer avec le temps
             {

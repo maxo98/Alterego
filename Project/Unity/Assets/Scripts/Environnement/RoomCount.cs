@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RoomCount : MonoBehaviour
 {
-
+    public GameObject[] MyEnnemy;
     RoomTemplates templates;
     void Start()
     {
@@ -13,7 +13,10 @@ public class RoomCount : MonoBehaviour
 
         templates = FindObjectOfType<RoomTemplates>();
         templates.rooms.Add(this.gameObject);
-
+        if (MyEnnemy != null)
+        {
+            RoomManager.instance.EnnemyDico.Add(gameObject, MyEnnemy);
+        }
         NavMeshBuilder.BuildNavMeshAsync();
     }
 

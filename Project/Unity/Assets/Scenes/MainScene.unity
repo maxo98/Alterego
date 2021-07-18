@@ -135,6 +135,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4396874976024426458, guid: 9b4b8642cdcebf0408252484a7dadaa0,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396874976024426458, guid: 9b4b8642cdcebf0408252484a7dadaa0,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396874976024426458, guid: 9b4b8642cdcebf0408252484a7dadaa0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5893086147782299626, guid: 9b4b8642cdcebf0408252484a7dadaa0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -504,7 +519,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-133938
+  m_Name: pb_Mesh-1794
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
