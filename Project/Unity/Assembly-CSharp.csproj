@@ -58,11 +58,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Enemy\BaseEnemyBehavior.cs" />
      <Compile Include="Assets\Scripts\Enemy\BossCombatController.cs" />
      <Compile Include="Assets\Scripts\Enemy\BossDefeated.cs" />
      <Compile Include="Assets\Scripts\Enemy\BossEnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemiesPackRangeDetection.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyAutoAttacks.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\Environnement\Destroyer.cs" />

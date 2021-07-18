@@ -513,10 +513,10 @@ GameObject:
   - component: {fileID: 5993054850676920180}
   - component: {fileID: 5993054850676920168}
   - component: {fileID: 5993054850676920169}
-  - component: {fileID: 5993054850676920175}
   - component: {fileID: 2177171338097634623}
   - component: {fileID: 761596182}
   - component: {fileID: 5215409172699037915}
+  - component: {fileID: 524097159853376509}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: enemy
@@ -623,21 +623,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5993054850676920175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5993054850676920182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cce73a7b564e13489a4c89998674736, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 761596182}
-  attackCooldown: 3
-  sightRange: 50
 --- !u!114 &2177171338097634623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,6 +675,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &524097159853376509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5993054850676920182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00b9873fd0006b478779519ca26db2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 761596182}
+  sightRange: 50
 --- !u!1 &8919636062213264176
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,7 +734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackBaseDamage: 10
-  attackCooldown: 5
+  attackCooldown: 3
   animator: {fileID: 5993054850676920169}
 --- !u!135 &8817364133408341400
 SphereCollider:

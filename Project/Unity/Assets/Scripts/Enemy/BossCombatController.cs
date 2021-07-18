@@ -141,7 +141,7 @@ namespace Enemy
             animationOrderStream.Subscribe(anim =>
                 {
                     animator.SetInteger(AnimationPlaying, (int) anim);
-                    Debug.Log($"{Enum.GetName(typeof(AnimationType), anim)}");
+                    //Debug.Log($"{Enum.GetName(typeof(AnimationType), anim)}");
                 })
                 .AddTo(this);
         }

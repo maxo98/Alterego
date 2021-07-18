@@ -59,6 +59,7 @@ namespace Enemy
 
         private void AddDamage(GameObject go)
         {
+            Debug.Log("enemy attack");
             go.GetComponentInParent<CharacterStatistic>().PlayerDamaged(attackBaseDamage);
         }
     }

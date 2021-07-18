@@ -735,7 +735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vitality: 0
   vitalityIncrement: 40
-  baseVitality: 100
+  baseVitality: 400
   defense: 0
   defenseIncrement: 0.75
   baseDefense: 0.1

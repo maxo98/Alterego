@@ -49,6 +49,7 @@ namespace ThirdPersonScripts
 
         private void AddDamage(GameObject go)
         {
+            
             go.GetComponent<EnemyHealth>().DoDamage(_attackDamage);
         }
         
