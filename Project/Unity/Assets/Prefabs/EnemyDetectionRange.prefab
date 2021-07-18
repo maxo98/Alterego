@@ -43,7 +43,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 50
+  m_Radius: 10.53
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1951364254176366385
 MonoBehaviour:
@@ -57,3 +57,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56284c6144ad57848b8a0cea66c23024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyList: []

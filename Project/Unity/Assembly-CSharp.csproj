@@ -69,10 +69,13 @@
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
     <Compile Include="Assets\ObjectLoaderHelper.cs" />
-    <Compile Include="Assets\Scripts\Enemy\BasicEnemyBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemy\BaseEnemyBehavior.cs" />
+    <Compile Include="Assets\Scripts\Enemy\BossCombatController.cs" />
     <Compile Include="Assets\Scripts\Enemy\BossDefeated.cs" />
+    <Compile Include="Assets\Scripts\Enemy\BossEnemyBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemiesPackRangeDetection.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAutoAttacks.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Environnement\BossRoomDoor.cs" />
@@ -94,6 +97,7 @@
     <Compile Include="Assets\Scripts\Skills\SwordThrowing.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonScripts\CharacterAutoAttacks.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonScripts\CharacterStatistic.cs" />
+    <Compile Include="Assets\Scripts\ThirdPersonScripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonScripts\SkillsManager.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonScripts\ThirdPersonCameraController.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonScripts\ThirdPersonCharacterController.cs" />

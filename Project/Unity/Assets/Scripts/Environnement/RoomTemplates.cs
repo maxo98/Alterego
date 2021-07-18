@@ -82,7 +82,10 @@ public class RoomTemplates : MonoBehaviour
                 bossRoom.tag = "BossRoom";
                 spawnedBoss = true;
                 DestroyAllRoomsChildren(bossRoom.transform);
-                key.Init();
+                if (key)
+                {
+                    key.Init();
+                }
                 endBoss = true;
                 KillChildren(level);
                 level.GetComponent<NavMeshSurface>().BuildNavMesh();
