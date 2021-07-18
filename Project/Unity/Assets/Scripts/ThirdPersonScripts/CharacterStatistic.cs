@@ -41,7 +41,7 @@ namespace ThirdPersonScripts
         //current player vitality rounded
         public float DisplayVitality()
         {
-            return Mathf.Round(GetVitality());
+            return _playerHealthPoint;
         }
 
         //current player defense

@@ -1245,6 +1245,7 @@
           <e p="ThirdPersonScripts" t="Include">
             <e p="CharacterAutoAttacks.cs" t="Include" />
             <e p="CharacterStatistic.cs" t="Include" />
+            <e p="PlayerHealth.cs" t="Include" />
             <e p="SkillsManager.cs" t="Include" />
             <e p="ThirdPersonCameraController.cs" t="Include" />
             <e p="ThirdPersonCharacterController.cs" t="Include" />
