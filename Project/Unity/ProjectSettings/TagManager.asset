@@ -10,6 +10,8 @@ TagManager:
   - Template
   - Closed
   - BossRoom
+  - Level
+  - Key
   layers:
   - Default
   - TransparentFX

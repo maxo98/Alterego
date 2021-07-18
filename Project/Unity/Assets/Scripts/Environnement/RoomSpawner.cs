@@ -35,22 +35,26 @@ public class RoomSpawner : MonoBehaviour
                     case TypeEntree.Top: //Spawn une room avec un porte TOP
                         offset.z += 1;
                         rand = Random.Range(0, templates.topRooms.Length);
-                        Instantiate(templates.topRooms[rand], transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        GameObject _go = Instantiate(templates.topRooms[rand], transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        _go.name = templates.topRooms[rand].name;
                         break;
                     case TypeEntree.Bottom: //Spawn une room avec un porte BOTTOM
                         offset.z -= 1;
                         rand = Random.Range(0, templates.bottomRooms.Length);
-                        Instantiate(templates.bottomRooms[rand], transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        GameObject _go1 = Instantiate(templates.bottomRooms[rand], transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        _go1.name = templates.bottomRooms[rand].name;
                         break;
                     case TypeEntree.Left: //Spawn une room avec un porte LEFT
                         offset.x -= 1;
                         rand = Random.Range(0, templates.leftRooms.Length);
-                        Instantiate(templates.leftRooms[rand], transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        GameObject _go2 = Instantiate(templates.leftRooms[rand], transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        _go2.name = templates.leftRooms[rand].name;
                         break;
                     case TypeEntree.Right: //Spawn une room avec un porte RIGHT
                         offset.x += 1;
                         rand = Random.Range(0, templates.rightRooms.Length);
-                        Instantiate(templates.rightRooms[rand], transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        GameObject _go3 = Instantiate(templates.rightRooms[rand], transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        _go3.name = templates.rightRooms[rand].name;
                         break;
                     default:
                         break;
@@ -63,22 +67,26 @@ public class RoomSpawner : MonoBehaviour
                     case TypeEntree.Top: //Spawn une room avec un porte TOP
                         offset.z += 1;
                         rand = Random.Range(0, templates.topRooms.Length);
-                        Instantiate(templates.closedHaut, transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        GameObject _go = Instantiate(templates.closedHaut, transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        _go.name = templates.closedHaut.name;
                         break;
                     case TypeEntree.Bottom: //Spawn une room avec un porte BOTTOM
                         offset.z -= 1;
                         rand = Random.Range(0, templates.bottomRooms.Length);
-                        Instantiate(templates.closedBas, transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        GameObject _go1 = Instantiate(templates.closedBas, transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        _go1.name = templates.closedBas.name;
                         break;
                     case TypeEntree.Left: //Spawn une room avec un porte LEFT
                         offset.x -= 1;
                         rand = Random.Range(0, templates.leftRooms.Length);
-                        Instantiate(templates.closedGauche, transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        GameObject _go2 = Instantiate(templates.closedGauche, transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        _go2.name = templates.closedGauche.name;
                         break;
                     case TypeEntree.Right: //Spawn une room avec un porte RIGHT
                         offset.x += 1;
                         rand = Random.Range(0, templates.rightRooms.Length);
-                        Instantiate(templates.closedDroite, transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        GameObject _go3 = Instantiate(templates.closedDroite, transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
+                        _go3.name = templates.closedDroite.name;
                         break;
                     default:
                         break;
@@ -92,11 +100,13 @@ public class RoomSpawner : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("EnvSpawnPoint"))
+        if (other.CompareTag("EnvSpawnPoint") && !ObjectLoaderHelper.loadScene)
         {
             if (other.GetComponent<RoomSpawner>().spawned == false && spawned == false ) // Spawn un mur qui empêche d'aller dans le vide
             {
-                Instantiate(closedRoom, transform.position, Quaternion.identity, RoomTemplates.instance.level);
+                GameObject _go = Instantiate(closedRoom, transform.position, Quaternion.identity, RoomTemplates.instance.level);
+                Debug.Log("je fais spawn une salle fermée");
+                _go.name = closedRoom.name;
                 Destroy(gameObject);
             }
             spawned = true;
