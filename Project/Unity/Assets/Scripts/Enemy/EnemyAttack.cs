@@ -8,11 +8,13 @@ namespace Enemy
     {
         [SerializeField] private float attackBaseDamage;
         [SerializeField] private float attackCooldown;
+        [SerializeField] private Animator animator;
 
         private GameObject _target;
         private bool _attackIntent;
         private float _currentAttackDuration;
         private float _currentAttackCooldown;
+        private static readonly int IsAttacking = Animator.StringToHash("isAttacking");
 
         private void Start()
         {
@@ -32,6 +34,7 @@ namespace Enemy
             if (!other.gameObject.Equals(_target)) return;
             //Debug.Log("player out range");
             _attackIntent = false;
+            animator.SetBool(IsAttacking, false);
             _currentAttackCooldown = attackCooldown;
         }
 
@@ -44,6 +47,7 @@ namespace Enemy
                     //Debug.Log("enemy target : " + _target.name);
                     _currentAttackCooldown = attackCooldown;
                     //Debug.Log("Enemy Attack");
+                    animator.SetBool(IsAttacking, true);
                     AddDamage(_target);
                 }
                 else

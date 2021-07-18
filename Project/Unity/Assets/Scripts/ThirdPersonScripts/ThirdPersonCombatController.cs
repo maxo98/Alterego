@@ -1,5 +1,4 @@
 ﻿using System;
-using Script.ThirdPersonScripts;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;

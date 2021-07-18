@@ -9,7 +9,6 @@ namespace Enemy
         public GameObject Player { get; set; }
         
         [SerializeField] private NavMeshAgent agent;
-        [SerializeField] private float attackCooldown;
         [SerializeField] protected float sightRange;
         private bool PlayerInRange { get; set; }
         private bool PlayerInAttackRange { get; set; }
@@ -28,6 +27,7 @@ namespace Enemy
             {
                 PlayerInSight();
                 Chasing();
+                Attack();
             }
             else
             {
@@ -58,12 +58,6 @@ namespace Enemy
             agent.SetDestination(_spawn);
         }
 
-        private void Attack()
-        {
-            
-        }
-        
-        
-        
+        protected virtual void Attack(){}
     }
 }

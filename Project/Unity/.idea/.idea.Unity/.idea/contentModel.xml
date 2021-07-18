@@ -1215,8 +1215,9 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Enemy" t="Include">
-            <e p="BasicEnemyBehaviour.cs" t="Include" />
+            <e p="BossCombatController.cs" t="Include" />
             <e p="BossDefeated.cs" t="Include" />
+            <e p="BossEnemyBehaviour.cs" t="Include" />
             <e p="EnemiesPackRangeDetection.cs" t="Include" />
             <e p="EnemyAttack.cs" t="Include" />
             <e p="EnemyBehaviour.cs" t="Include" />

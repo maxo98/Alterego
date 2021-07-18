@@ -99,11 +99,6 @@ namespace ThirdPersonScripts
         // Update is called once per frame
         private void FixedUpdate()
         {
-            if (combatController.IsAttacking)
-            {
-                animator.SetFloat(InputMagnitude, 0f);
-                return;
-            }
 
             if (_jumping)
             {
