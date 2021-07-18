@@ -8,7 +8,18 @@ public class BossDefeated : MonoBehaviour
 
     public void VictoryScreen()
     {
-        victoryScreen.SetActive(true);
+        RoomTemplates.instance.VictoryScreen.SetActive(true);
         Time.timeScale = 0f;
+        PauseMenu.GameisPaused = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            VictoryScreen();
+        }
     }
 }

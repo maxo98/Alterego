@@ -1,14 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.AI;
 using UnityEngine;
 
 public class RoomCount : MonoBehaviour
 {
-    RoomManager rm;
+
+    RoomTemplates templates;
     void Start()
     {
-        rm = FindObjectOfType<RoomManager>();
-        rm.NombreActuelRoom++;
+        RoomManager.NombreActuelRoom++;
+
+        templates = FindObjectOfType<RoomTemplates>();
+        templates.rooms.Add(this.gameObject);
+
+        NavMeshBuilder.BuildNavMeshAsync();
     }
 
 }

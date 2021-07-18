@@ -67,10 +67,17 @@ MonoBehaviour:
     type: 3}
   closedBas: {fileID: 8667702232893590631, guid: 70fa1ed151e5ddc4a84646a3871413bb,
     type: 3}
-  closedDroite: {fileID: 3402509385730308514, guid: e8a1baf156a1c6d4fa93d3d8a113280c,
+  closedDroite: {fileID: 3312837783023673683, guid: 890df702be9329e41a484aa68ead0a61,
     type: 3}
   closedGauche: {fileID: 8067084088943904170, guid: 6e382dff047e1b646b8bf1ac5cd0654f,
     type: 3}
+  rooms: []
+  BossRoom: {fileID: 0}
+  BossDoor: {fileID: 8970800622100453756, guid: b4c38b35b6f9d4d4b9843322d302fb90,
+    type: 3}
+  boss: {fileID: 6918574538956137175, guid: be63cf25c3d20fd4289aee8ea3f243b9, type: 3}
+  key: {fileID: 0}
+  VictoryScreen: {fileID: 0}
 --- !u!114 &7254973537879081645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +90,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f12399e383a3394aad44e79893ca371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NombreMaxRoom: 25
-  NombreActuelRoom: 0
+  NombreMaxRoom: 10
   stopGenerate: 0

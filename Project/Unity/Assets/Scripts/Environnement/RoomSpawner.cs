@@ -35,22 +35,22 @@ public class RoomSpawner : MonoBehaviour
                     case TypeEntree.Top: //Spawn une room avec un porte TOP
                         offset.z += 1;
                         rand = Random.Range(0, templates.topRooms.Length);
-                        Instantiate(templates.topRooms[rand], transform.position + offset, Quaternion.identity);
+                        Instantiate(templates.topRooms[rand], transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
                         break;
                     case TypeEntree.Bottom: //Spawn une room avec un porte BOTTOM
                         offset.z -= 1;
                         rand = Random.Range(0, templates.bottomRooms.Length);
-                        Instantiate(templates.bottomRooms[rand], transform.position + offset, Quaternion.identity);
+                        Instantiate(templates.bottomRooms[rand], transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
                         break;
                     case TypeEntree.Left: //Spawn une room avec un porte LEFT
                         offset.x -= 1;
                         rand = Random.Range(0, templates.leftRooms.Length);
-                        Instantiate(templates.leftRooms[rand], transform.position + offset, Quaternion.identity);
+                        Instantiate(templates.leftRooms[rand], transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
                         break;
                     case TypeEntree.Right: //Spawn une room avec un porte RIGHT
                         offset.x += 1;
                         rand = Random.Range(0, templates.rightRooms.Length);
-                        Instantiate(templates.rightRooms[rand], transform.position + offset, Quaternion.identity);
+                        Instantiate(templates.rightRooms[rand], transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
                         break;
                     default:
                         break;
@@ -63,22 +63,22 @@ public class RoomSpawner : MonoBehaviour
                     case TypeEntree.Top: //Spawn une room avec un porte TOP
                         offset.z += 1;
                         rand = Random.Range(0, templates.topRooms.Length);
-                        Instantiate(templates.closedHaut, transform.position + offset, Quaternion.identity);
+                        Instantiate(templates.closedHaut, transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
                         break;
                     case TypeEntree.Bottom: //Spawn une room avec un porte BOTTOM
                         offset.z -= 1;
                         rand = Random.Range(0, templates.bottomRooms.Length);
-                        Instantiate(templates.closedBas, transform.position + offset, Quaternion.identity);
+                        Instantiate(templates.closedBas, transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
                         break;
                     case TypeEntree.Left: //Spawn une room avec un porte LEFT
                         offset.x -= 1;
                         rand = Random.Range(0, templates.leftRooms.Length);
-                        Instantiate(templates.closedGauche, transform.position + offset, Quaternion.identity);
+                        Instantiate(templates.closedGauche, transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
                         break;
                     case TypeEntree.Right: //Spawn une room avec un porte RIGHT
                         offset.x += 1;
                         rand = Random.Range(0, templates.rightRooms.Length);
-                        Instantiate(templates.closedDroite, transform.position + offset, Quaternion.identity);
+                        Instantiate(templates.closedDroite, transform.position + offset, Quaternion.identity, RoomTemplates.instance.level);
                         break;
                     default:
                         break;
@@ -96,7 +96,7 @@ public class RoomSpawner : MonoBehaviour
         {
             if (other.GetComponent<RoomSpawner>().spawned == false && spawned == false ) // Spawn un mur qui empêche d'aller dans le vide
             {
-                Instantiate(closedRoom, transform.position, Quaternion.identity);
+                Instantiate(closedRoom, transform.position, Quaternion.identity, RoomTemplates.instance.level);
                 Destroy(gameObject);
             }
             spawned = true;
