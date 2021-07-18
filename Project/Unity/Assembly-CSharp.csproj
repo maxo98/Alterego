@@ -68,6 +68,7 @@
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
+    <Compile Include="Assets\ObjectLoaderHelper.cs" />
     <Compile Include="Assets\Scripts\Enemy\BasicEnemyBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemy\BossDefeated.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemiesPackRangeDetection.cs" />
@@ -80,6 +81,9 @@
     <Compile Include="Assets\Scripts\Environnement\RoomManager.cs" />
     <Compile Include="Assets\Scripts\Environnement\RoomSpawner.cs" />
     <Compile Include="Assets\Scripts\Environnement\RoomTemplates.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem\SaveManager.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem\SaveObject.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\Skills\CircularSlash.cs" />
     <Compile Include="Assets\Scripts\Skills\DefaultSkill.cs" />
     <Compile Include="Assets\Scripts\Skills\EnemiesFlash.cs" />

@@ -9,6 +9,13 @@ public class Key : MonoBehaviour
     private float yValue;
     private float zValue;
     // Start is called before the first frame update
+    private void Start()
+    {
+        if (!RoomTemplates.instance.key)
+        {
+            RoomTemplates.instance.key = this;
+        }
+    }
     public void Init()
     {
         xValue = Random.Range(-55f, 55f);

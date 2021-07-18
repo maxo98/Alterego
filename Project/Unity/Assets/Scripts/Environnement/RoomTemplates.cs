@@ -6,6 +6,7 @@ using UnityEngine;
 public class RoomTemplates : MonoBehaviour
 {
     public Transform level;
+    public GameObject test;
 
     public GameObject[] bottomRooms;
     public GameObject[] topRooms;
@@ -20,8 +21,8 @@ public class RoomTemplates : MonoBehaviour
     public GameObject closedGauche;
 
     public List<GameObject> rooms;
-    public GameObject BossRoom;
-    public GameObject BossDoor;
+    public GameObject bossRoom;
+    public GameObject bossDoor;
 
     private float waitTime = 2f;
     private bool spawnedBoss;
@@ -50,6 +51,11 @@ public class RoomTemplates : MonoBehaviour
             Destroy(this);
             Debug.Log("Il existe deja une instance de RoomTemplate");
         }
+
+        if (!level)
+        {
+            level = GameObject.FindGameObjectWithTag("Level").transform;
+        }
     }
     #endregion
     private void Start()
@@ -58,7 +64,7 @@ public class RoomTemplates : MonoBehaviour
     }
     private void Update()
     {
-        if (!endBoss)
+        if (!endBoss && !ObjectLoaderHelper.loadScene)
         {
             SpawnTheBoss();
         }
@@ -71,13 +77,14 @@ public class RoomTemplates : MonoBehaviour
         {
             if (waitTime <= 0 && !spawnedBoss) // on verifie que la fin du timer est pas inferieur on égal à 0
             {
-                BossRoom = rooms[rooms.Count - 1];
-                GameObject _tempBoss = Instantiate(boss, BossRoom.transform.position - (transform.up * 5), Quaternion.identity);
-                BossRoom.name = "BossRoom";
+                bossRoom = rooms[rooms.Count - 1];
+                GameObject _tempBoss = SpawnBoss(bossRoom.transform);
+                bossRoom.tag = "BossRoom";
                 spawnedBoss = true;
-                DestroyAllRoomsChildren(BossRoom.transform);
+                DestroyAllRoomsChildren(bossRoom.transform);
                 key.Init();
                 endBoss = true;
+                KillChildren(level);
                 level.GetComponent<NavMeshSurface>().BuildNavMesh();
             }
             else // On diminue le timer avec le temps
@@ -90,6 +97,13 @@ public class RoomTemplates : MonoBehaviour
             waitTime = 2f;
             tempCount = rooms.Count;
         }
+    }
+
+    
+    public GameObject SpawnBoss(Transform _bossRoom)
+    {
+        GameObject _go = Instantiate(boss, _bossRoom.position - (transform.up * 5), Quaternion.identity);
+        return _go;
     }
 
     void SpawnBossDoor(GameObject _bossRoom)
@@ -126,9 +140,10 @@ public class RoomTemplates : MonoBehaviour
     }
     void CheckTheDoorToSpawn(RaycastHit _hit, Vector3 _spawnPoint, Quaternion _orientation)
     {
-        if (_hit.transform.gameObject.name != "BossRoom")
+        if (_hit.transform.gameObject.tag != "BossRoom")
         {
-            Instantiate(BossDoor, _spawnPoint, _orientation, level);
+            GameObject _go = Instantiate(bossDoor, _spawnPoint, _orientation, level);
+            _go.name = bossDoor.name;
         }
     }
     void DestroyAllRoomsChildren(Transform _room)
@@ -138,6 +153,20 @@ public class RoomTemplates : MonoBehaviour
         {
             Destroy(_room.GetChild(i).gameObject);
         }
-        SpawnBossDoor(BossRoom);
+        SpawnBossDoor(bossRoom);
+    }
+
+    public static void KillChildren(Transform _level)
+    {
+        foreach (Transform child in _level)
+        {
+            foreach (Transform child2 in child)
+            {
+                if (child2.GetComponent<RoomSpawner>())
+                {
+                    Destroy(child2.gameObject);
+                }
+            }
+        }
     }
 }
