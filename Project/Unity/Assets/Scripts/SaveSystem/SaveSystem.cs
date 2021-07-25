@@ -18,7 +18,6 @@ public class SaveSystem : MonoBehaviour
             DestroyOld(level);
             GetListIntoMap(so);
             Time.timeScale = 1f;
-            ObjectLoaderHelper.loadScene = false;
         }
     }
     public void SaveData()
