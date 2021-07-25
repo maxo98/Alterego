@@ -25,6 +25,11 @@ public class LevelLoader : MonoBehaviour
     {
         ObjectLoaderHelper.loadScene = true;
     }
+
+    public void MainScene()
+    {
+        ObjectLoaderHelper.loadScene = false;
+    }
     public void NewGame()
     {
         ObjectLoaderHelper.instance.fileToLoad = null;
