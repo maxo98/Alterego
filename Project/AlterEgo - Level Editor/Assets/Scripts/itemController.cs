@@ -29,11 +29,13 @@ public class itemController : MonoBehaviour
                 GetProps();
                 break;
             case MyScriptableObj.TypeObject.Ennemis:
+                GetEnnemis();
                 break;
             case MyScriptableObj.TypeObject.Rooms:
                 GetRooms();
                 break;
             case MyScriptableObj.TypeObject.Loot:
+                GetLoot();
                 break;
             default:
                 break;
@@ -44,6 +46,7 @@ public class itemController : MonoBehaviour
     {
         Clicked = true;
         currentGO = Instantiate(mySO.myPrefab, mouse.position, Quaternion.identity, editor.Environnement);
+        currentGO.name = mySO.myPrefab.name;
         currentGO.GetComponent<Renderer>().material = editor.GhostMat;
         currentGO.AddComponent<ItFollows>();
         editor.CurrentButtonPressed = ID;
@@ -52,7 +55,8 @@ public class itemController : MonoBehaviour
     private void GetEnnemis()
     {
         Clicked = true;
-        currentGO = Instantiate(mySO.myPrefab, mouse.position, Quaternion.identity);
+        currentGO = Instantiate(mySO.myPrefab, mouse.position, Quaternion.identity, editor.Environnement);
+        currentGO.name = mySO.myPrefab.name;
         currentGO.GetComponent<Renderer>().material = editor.GhostMat;
         currentGO.AddComponent<ItFollows>();
         editor.CurrentButtonPressed = ID;
@@ -62,6 +66,7 @@ public class itemController : MonoBehaviour
     {
         Clicked = true;
         currentGO = Instantiate(mySO.myPrefab, mouse.position + offset, Quaternion.identity, editor.Environnement);
+        currentGO.name = mySO.myPrefab.name;
         currentGO.GetComponent<Renderer>().material = editor.GhostMat;
         currentGO.AddComponent<ItFollows>();
         editor.CurrentButtonPressed = ID;
@@ -70,7 +75,8 @@ public class itemController : MonoBehaviour
     private void GetLoot()
     {
         Clicked = true;
-        currentGO = Instantiate(mySO.myPrefab, mouse.position, Quaternion.identity);
+        currentGO = Instantiate(mySO.myPrefab, mouse.position, Quaternion.identity, editor.Environnement);
+        currentGO.name = mySO.myPrefab.name;
         currentGO.GetComponent<Renderer>().material = editor.GhostMat;
         currentGO.AddComponent<ItFollows>();
         editor.CurrentButtonPressed = ID;

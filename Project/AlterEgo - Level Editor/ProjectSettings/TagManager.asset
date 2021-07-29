@@ -12,6 +12,8 @@ TagManager:
   - LevelEditorManager
   - ItemImage
   - Mouse
+  - BossRoom
+  - Level
   layers:
   - Default
   - TransparentFX

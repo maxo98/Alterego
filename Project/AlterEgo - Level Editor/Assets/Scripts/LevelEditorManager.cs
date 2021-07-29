@@ -13,6 +13,9 @@ public class LevelEditorManager : MonoBehaviour
     public GameObject[] itemPrefabs;
     public Transform Environnement;
     Vector3 offset = new Vector3(0, 11, 0);
+    Vector3 offsetBalcon = new Vector3(-2, 0, 0);
+
+    [SerializeField] private Camera mainCamera;
     //   public GameObject[] itemImage;
 
 
@@ -33,6 +36,15 @@ public class LevelEditorManager : MonoBehaviour
                 {
                     _item.currentGO.transform.position += offset;
                 }
+                if (_item.currentGO.name == "Balcon")
+                {
+                    if (_item.currentGO.transform.position.y > 1.3f)
+                    {
+                        _item.currentGO.transform.position += offsetBalcon;
+                        Debug.Log("fait");
+                    }
+                }
+                _item.currentGO.layer = 8;
                 
             }
         }
