@@ -40,11 +40,8 @@ public static class SaveManager
             for (int i = 0; i < splitJson.Length -1; i++)
             {
                 _so[i] = JsonUtility.FromJson<SaveObject>(splitJson[i]);
-                Debug.Log(_so[i].room);
             }
-            //_so = JsonUtility.FromJson<SaveObject>(_json);
             //SaveSystem.DestroyOld(_oldSo);
-            Debug.Log("voici la liste dans Load : " + _so);
             return _so;
         }
         else

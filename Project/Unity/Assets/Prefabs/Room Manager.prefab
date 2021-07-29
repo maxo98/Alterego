@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8847247907666545801}
   - component: {fileID: 4907191060585901836}
-  - component: {fileID: 7254973537879081645}
   m_Layer: 0
   m_Name: Room Manager
   m_TagString: Template
@@ -47,22 +46,24 @@ MonoBehaviour:
   level: {fileID: 0}
   test: {fileID: 9210465225848401427, guid: 4568d4f66ecab034fae29636b49457bd, type: 3}
   bottomRooms:
-  - {fileID: 2528470075551149767, guid: e439225b56d98cb4eaa2a83c710bf33c, type: 3}
-  - {fileID: 4803369699969950865, guid: 752341ceb8b55664da1aeb5de2280a99, type: 3}
+  - {fileID: 8667702232893590631, guid: 12c6746b0a3213a4d813f2e94e4bd47b, type: 3}
+  - {fileID: 4803369699969950865, guid: 3db8838c265c99146a2285d092b33211, type: 3}
   - {fileID: 106827650818949453, guid: 3f10a3e66afc45e41b68c2597205ca31, type: 3}
+  - {fileID: 2528470075551149767, guid: 64004b492bbe06b45bc165dbd85c8ef5, type: 3}
   topRooms:
-  - {fileID: 2528470075551149767, guid: e439225b56d98cb4eaa2a83c710bf33c, type: 3}
+  - {fileID: 4790124501927745391, guid: 404224cc3aa9bba41ac5fc86172bf6a0, type: 3}
+  - {fileID: 2528470075551149767, guid: 64004b492bbe06b45bc165dbd85c8ef5, type: 3}
   - {fileID: 1666154956139645039, guid: f125744c2880831469b2c9874ee619dc, type: 3}
   - {fileID: 8090716672914398452, guid: 46e475bb6810dc34987da03bdbe8ebf6, type: 3}
   leftRooms:
-  - {fileID: 5746128198219354177, guid: 5d7710d71fa0bd6469dde4e4b64dcb29, type: 3}
+  - {fileID: 5746128198219354177, guid: 536a13f356e71d6409969bae9c0dab3c, type: 3}
   - {fileID: 106827650818949453, guid: 3f10a3e66afc45e41b68c2597205ca31, type: 3}
   - {fileID: 8090716672914398452, guid: 46e475bb6810dc34987da03bdbe8ebf6, type: 3}
   rightRooms:
-  - {fileID: 5746128198219354177, guid: 5d7710d71fa0bd6469dde4e4b64dcb29, type: 3}
+  - {fileID: 3312837783023673683, guid: 81256cbb6267cdb4ebf2df7b7be82452, type: 3}
+  - {fileID: 4803369699969950865, guid: 3db8838c265c99146a2285d092b33211, type: 3}
+  - {fileID: 5746128198219354177, guid: 536a13f356e71d6409969bae9c0dab3c, type: 3}
   - {fileID: 1666154956139645039, guid: f125744c2880831469b2c9874ee619dc, type: 3}
-  - {fileID: 4803369699969950865, guid: 752341ceb8b55664da1aeb5de2280a99, type: 3}
-  - {fileID: 4803369699969950865, guid: 752341ceb8b55664da1aeb5de2280a99, type: 3}
   closedRoom: {fileID: 822533975239630058, guid: 4f9d9a56762309643ad3b882568ced24,
     type: 3}
   closedHaut: {fileID: 4790124501927745391, guid: 404224cc3aa9bba41ac5fc86172bf6a0,
@@ -77,20 +78,6 @@ MonoBehaviour:
   bossRoom: {fileID: 0}
   bossDoor: {fileID: 8970800622100453756, guid: b4c38b35b6f9d4d4b9843322d302fb90,
     type: 3}
-  boss: {fileID: 6918574538956137175, guid: be63cf25c3d20fd4289aee8ea3f243b9, type: 3}
+  boss: {fileID: 3864067804407204832, guid: d2e54e80a9989254dac0707f2e9bb43b, type: 3}
   key: {fileID: 0}
   VictoryScreen: {fileID: 0}
---- !u!114 &7254973537879081645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594365120216905584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f12399e383a3394aad44e79893ca371, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NombreMaxRoom: 10
-  stopGenerate: 0

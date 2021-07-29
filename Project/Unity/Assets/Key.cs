@@ -34,7 +34,8 @@ public class Key : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             BossRoomDoor.hasKey = true;
-            gameObject.SetActive(false);
+            Destroy(this.gameObject);
+            //gameObject.SetActive(false);
         }
         else if (collision.gameObject.tag == "Rooms")
         {

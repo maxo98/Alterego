@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1764259143593068981}
   - component: {fileID: 3446436526376257040}
   - component: {fileID: 590187653899907802}
+  - component: {fileID: -7833802464571431213}
   m_Layer: 0
   m_Name: Pont sans rampes
   m_TagString: Untagged
@@ -25,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382667737954374415}
-  m_LocalRotation: {x: 0, y: 1.2246469e-16, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.52, y: 0.56, z: 16.84}
-  m_LocalScale: {x: 0.14907378, y: 0.011458681, z: 0.029905217}
+  m_LocalScale: {x: 0.35848477, y: 0.027555231, z: 0.09973101}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-7833802464571431213
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382667737954374415}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5302568919011541938, guid: 2d1dbb1a552ed44498abd39ee973f57f, type: 3}
