@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6795538263514700437}
   - component: {fileID: 7629451393158436144}
   - component: {fileID: 5622100746293060090}
+  - component: {fileID: -8716226145038677055}
   m_Layer: 0
   m_Name: Barricade
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-8716226145038677055
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6126384950383869999}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4068373912626513877, guid: 48c18803dfec56c4da118be0b0d07761, type: 3}

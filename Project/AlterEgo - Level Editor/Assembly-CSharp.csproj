@@ -69,9 +69,14 @@
     <Compile Include="Assets\Scripts Environnements\RoomManager.cs" />
     <Compile Include="Assets\Scripts Environnements\RoomSpawner.cs" />
     <Compile Include="Assets\Scripts Environnements\RoomTemplates.cs" />
+    <Compile Include="Assets\Scripts\Exit.cs" />
     <Compile Include="Assets\Scripts\ItFollows.cs" />
     <Compile Include="Assets\Scripts\LevelEditorManager.cs" />
     <Compile Include="Assets\Scripts\MousePosition.cs" />
+    <Compile Include="Assets\Scripts\ObjectLoaderHelper.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem\SaveManager.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem\SaveObject.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\itemController.cs" />
     <Compile Include="Assets\Scripts\scriptableobj\MyScriptableObj.cs" />
     <Compile Include="Assets\cameraController.cs" />

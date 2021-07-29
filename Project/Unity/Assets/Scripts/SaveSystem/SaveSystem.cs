@@ -8,18 +8,21 @@ public class SaveSystem : MonoBehaviour
     int count = 0;
     public Transform level;
     public static bool destroyerFinish = false;
+    private Vector3 spawnPoint;
+    private bool hasKeyInSaveGame;
     private void Awake()
     {
+        spawnPoint = new Vector3(0, 10, 0);
         if (ObjectLoaderHelper.loadScene)
         {
             Debug.Log("je load");
-            Time.timeScale = 0f;
             so = SaveManager.Load(level, ObjectLoaderHelper.instance.fileToLoad);
             DestroyOld(level);
             GetListIntoMap(so);
-            Time.timeScale = 1f;
-            ObjectLoaderHelper.loadScene = false;
+            SpawnPlayer();
+            RoomTemplates.instance.MakeNavMesh();
         }
+
     }
     public void SaveData()
     {
@@ -32,6 +35,7 @@ public class SaveSystem : MonoBehaviour
         so = SaveManager.Load(level, Application.persistentDataPath + SaveManager.directory + SaveManager.saveFilename);
         DestroyOld(level);
         GetListIntoMap(so);
+        SpawnPlayer();
     }
 
     public void GetMapIntoList()
@@ -79,7 +83,7 @@ public class SaveSystem : MonoBehaviour
                 Vector3 _pos = new Vector3(_so[i].Position[0], _so[i].Position[1], _so[i].Position[2]);
                 Quaternion _rot = new Quaternion(_so[i].Rotation[0], _so[i].Rotation[1], _so[i].Rotation[2], _so[i].Rotation[3]);
                 Vector3 _sca = new Vector3(_so[i].Scale[0], _so[i].Scale[1], _so[i].Scale[2]);
-                Debug.Log(ObjectLoaderHelper.myDico[_so[i].room]);
+                //Debug.Log(ObjectLoaderHelper.myDico[_so[i].room]);
                 GameObject _go = Instantiate(ObjectLoaderHelper.myDico[_so[i].room], _pos, _rot, level);
                 _go.name = ObjectLoaderHelper.myDico[_so[i].room].name;
                 if (RoomTemplates.instance && i == _so.Length-2)
@@ -89,16 +93,28 @@ public class SaveSystem : MonoBehaviour
                 }
                 else if(RoomTemplates.instance && _go.name == "Key")
                 {
-                    RoomTemplates.instance.key = _go.GetComponent<Key>();
+                    hasKeyInSaveGame = true;
                 }
                 _go.transform.localScale = _sca;
                 _listGo[i] = _go;
             }
         }
+        if (hasKeyInSaveGame)
+        {
+            BossRoomDoor.hasKey = false;
+        }
+        else
+        {
+            BossRoomDoor.hasKey = true;           
+        }
         KillChildren();
 
     }
-
+    private void SpawnPlayer()
+    {
+        Instantiate(ObjectLoaderHelper.instance.Player, spawnPoint, Quaternion.identity);
+        Debug.Log("Joueur spawné");
+    }
     public void KillChildren()
     {
         foreach (Transform child in level)

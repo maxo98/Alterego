@@ -22,4 +22,6 @@ public class BossDefeated : MonoBehaviour
             VictoryScreen();
         }
     }
+
+    // obsolète, voir EndGameHandle
 }

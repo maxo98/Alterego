@@ -12,6 +12,8 @@ TagManager:
   - BossRoom
   - Level
   - Key
+  - Victory
+  - Lose
   layers:
   - Default
   - TransparentFX

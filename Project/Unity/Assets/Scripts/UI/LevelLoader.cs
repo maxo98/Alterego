@@ -12,12 +12,21 @@ public class LevelLoader : MonoBehaviour
     {
        StartCoroutine(LoadLevel(1)); // Ou SceneManager.GetActiveScene().buildIndex + 1; pour la scene qui suit dans le build manager
     }
+    public void LoadWinNewGame()
+    {
+        CheckTimeScale();
+        RoomManager.NombreActuelRoom = 0;
+        RoomManager.instance.NombreMaxRoom += 2;
+        RoomManager.instance.stopGenerate = false;
+        StartCoroutine(LoadLevel(1));
+    }
     public void LoadLevelFromASave()
     {
         StartCoroutine(LoadLevel(2)); // Ou SceneManager.GetActiveScene().buildIndex + 1; pour la scene qui suit dans le build manager
     }
     public void LoadMainMenu()
     {
+        CheckTimeScale();
         StartCoroutine(LoadLevel(0));
     }
 
@@ -25,10 +34,16 @@ public class LevelLoader : MonoBehaviour
     {
         ObjectLoaderHelper.loadScene = true;
     }
+
+    public void MainScene()
+    {
+        ObjectLoaderHelper.loadScene = false;
+    }
     public void NewGame()
     {
         ObjectLoaderHelper.instance.fileToLoad = null;
     }
+
     public void FromSave()
     {
         ObjectLoaderHelper.instance.fileToLoad = Application.persistentDataPath + SaveManager.directory + SaveManager.saveFilename;
@@ -48,7 +63,15 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(_levelIndex);
     }
+    void CheckTimeScale()
+    {
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+            PauseMenu.GameisPaused = false;
 
+        }
+    }
     public void MainMenu()
     {
         SceneManager.LoadScene(0);

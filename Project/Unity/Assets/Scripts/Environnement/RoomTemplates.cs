@@ -78,7 +78,6 @@ public class RoomTemplates : MonoBehaviour
             if (waitTime <= 0 && !spawnedBoss) // on verifie que la fin du timer est pas inferieur on égal à 0
             {
                 bossRoom = rooms[rooms.Count - 1];
-                GameObject _tempBoss = SpawnBoss(bossRoom.transform);
                 bossRoom.tag = "BossRoom";
                 spawnedBoss = true;
                 DestroyAllRoomsChildren(bossRoom.transform);
@@ -88,7 +87,9 @@ public class RoomTemplates : MonoBehaviour
                 }
                 endBoss = true;
                 KillChildren(level);
-                level.GetComponent<NavMeshSurface>().BuildNavMesh();
+                MakeNavMesh();
+                StartCoroutine(waitTimeForEnnemies(4));
+                GameObject _tempBoss = SpawnBoss(bossRoom.transform);
                 RoomManager.instance.SpawnEnnemis();
             }
             else // On diminue le timer avec le temps
@@ -103,10 +104,14 @@ public class RoomTemplates : MonoBehaviour
         }
     }
 
-    
+    public void MakeNavMesh()
+    {
+        level.GetComponent<NavMeshSurface>().BuildNavMesh();
+    }
     public GameObject SpawnBoss(Transform _bossRoom)
     {
-        GameObject _go = Instantiate(boss, _bossRoom.position - (transform.up * 5), Quaternion.identity);
+        GameObject _go = Instantiate(boss, _bossRoom.position - (transform.up * 5), Quaternion.identity, level);
+        _go.name = boss.name;
         return _go;
     }
 
@@ -172,5 +177,10 @@ public class RoomTemplates : MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator waitTimeForEnnemies (int time)
+    {
+        yield return new WaitForSeconds(time);
     }
 }

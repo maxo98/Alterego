@@ -7,7 +7,8 @@ public class RoomManager : MonoBehaviour
     public int NombreMaxRoom;
     public static int NombreActuelRoom = 0;
     public bool stopGenerate = false;
-    public Dictionary<GameObject, GameObject[]> EnnemyDico;
+    public static int ObjID = 0;
+    public Dictionary<int, GameObject> EnnemyDico;
 
     #region Singleton
 
@@ -21,12 +22,11 @@ public class RoomManager : MonoBehaviour
         }
         else
         {
-            Destroy(this);
+            Destroy(this.gameObject);
             Debug.Log("Il existe deja une instance de RoomTemplate");
         }
-
-        EnnemyDico.Clear();
-        EnnemyDico = new Dictionary<GameObject, GameObject[]>();
+        DontDestroyOnLoad(this.gameObject);
+        EnnemyDico = new Dictionary<int, GameObject>();
     }
     #endregion
     private void Update()
@@ -36,15 +36,18 @@ public class RoomManager : MonoBehaviour
             stopGenerate = true;
         }
     }
+    public static int GetId()
+    {
+        int _temp = ObjID;
+        ObjID++;
+        return _temp;
+    }
 
     public void SpawnEnnemis()
     {
-        foreach (var item in EnnemyDico)
+        foreach (var item in EnnemyDico.Values)
         {
-            foreach (var zone in item.Value)
-            {
-                zone.SetActive(true);
-            }
+            item.SetActive(true);
         }
     }
 }
