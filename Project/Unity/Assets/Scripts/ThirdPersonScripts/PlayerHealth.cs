@@ -13,15 +13,16 @@ namespace ThirdPersonScripts
 
         private void Awake()
         {
-            pause = GameObject.FindGameObjectWithTag("UI_Pause");
+            //pause = GameObject.FindGameObjectWithTag("UI_Pause");
         }
 
         private void Update()
         {
             sliderHealth.value = characterStatistic.DisplayVitality() / characterStatistic.GetVitality();
-            if (characterStatistic.DisplayVitality() <= 0)
+            if (characterStatistic.DisplayVitality() <= 0 && !EndGameHandle.done)
             {
-                pause.GetComponent<EndGameHandle>().LoseScreen();
+                //pause.GetComponent<EndGameHandle>().LoseScreen();
+                EndGameHandle.LoseScreen();
             }
         }
     }

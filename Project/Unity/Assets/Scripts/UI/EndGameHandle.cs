@@ -5,20 +5,22 @@ using UnityEngine;
 public class EndGameHandle : MonoBehaviour
 {
     [SerializeField] private static RoomTemplates roomTemplates;
-
-    public void VictoryScreen()
+    public static bool done = false;
+    public static void VictoryScreen()
     {
+        done = true;
         RoomTemplates.instance.VictoryScreen.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         PauseMenu.GameisPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
-    public void LoseScreen()
+    public static void LoseScreen()
     {
+        done = true;
         RoomTemplates.instance.LoseScreen.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         PauseMenu.GameisPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

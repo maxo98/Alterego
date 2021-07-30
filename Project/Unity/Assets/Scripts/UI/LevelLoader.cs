@@ -14,20 +14,36 @@ public class LevelLoader : MonoBehaviour
     }
     public void LoadWinNewGame()
     {
-        CheckTimeScale();
+        //CheckTimeScale();
+        Time.timeScale = 1f;
+        PauseMenu.GameisPaused = false;
         RoomManager.NombreActuelRoom = 0;
         RoomManager.instance.NombreMaxRoom += 2;
         RoomManager.instance.stopGenerate = false;
         StartCoroutine(LoadLevel(1));
+        EndGameHandle.done = false;
+    }
+    public void LoadLoseNewGame()
+    {
+        //CheckTimeScale();
+        Time.timeScale = 1f;
+        PauseMenu.GameisPaused = false;
+        RoomManager.NombreActuelRoom = 0;
+        RoomManager.instance.NombreMaxRoom = 6;
+        RoomManager.instance.stopGenerate = false;
+        StartCoroutine(LoadLevel(1));
+        EndGameHandle.done = false;
     }
     public void LoadLevelFromASave()
     {
         StartCoroutine(LoadLevel(2)); // Ou SceneManager.GetActiveScene().buildIndex + 1; pour la scene qui suit dans le build manager
+        EndGameHandle.done = false;
     }
     public void LoadMainMenu()
     {
         CheckTimeScale();
         StartCoroutine(LoadLevel(0));
+        EndGameHandle.done = false;
     }
 
     public void LoadScene()
@@ -65,12 +81,9 @@ public class LevelLoader : MonoBehaviour
     }
     void CheckTimeScale()
     {
-        if (Time.timeScale == 0f)
-        {
-            Time.timeScale = 1f;
-            PauseMenu.GameisPaused = false;
+        Time.timeScale = 1f;
+        PauseMenu.GameisPaused = false;
 
-        }
     }
     public void MainMenu()
     {

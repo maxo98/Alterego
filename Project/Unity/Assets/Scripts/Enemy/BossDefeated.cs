@@ -19,7 +19,7 @@ public class BossDefeated : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            VictoryScreen();
+            EndGameHandle.VictoryScreen();
         }
     }
 
