@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Enemy;
+using UnityEngine;
 
 namespace ThirdPersonScripts
 {
@@ -49,8 +50,14 @@ namespace ThirdPersonScripts
 
         private void AddDamage(GameObject go)
         {
-            
-            go.GetComponent<EnemyHealth>().DoDamage(_attackDamage);
+            try
+            {
+                go.GetComponentInParent<CharacterStatistic>().PlayerDamaged(_attackDamage);
+            }
+            catch
+            {
+                go.GetComponent<EnemyHealth>().DoDamage(_attackDamage);
+            }
         }
         
     }

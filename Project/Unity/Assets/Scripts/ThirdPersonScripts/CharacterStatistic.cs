@@ -115,7 +115,7 @@ namespace ThirdPersonScripts
         public void PlayerDamaged(float damages)
         {
             _playerHealthPoint -= damages;
-            Debug.Log("player took damage : " + _playerHealthPoint);
+            
         }
 
         //player receive heals

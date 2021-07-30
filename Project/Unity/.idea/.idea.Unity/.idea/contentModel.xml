@@ -4,8 +4,26 @@
     <e p="C:\Users\maxo9\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\maxo9\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Unity.-1021460827.00" t="ExcludeRecursive" />
     <e p="E:\User\Documents\ESGI\Projet Annuel\Alterego\Project\Unity" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Key.cs" t="Include" />
+        <e p="NavMeshComponents" t="Include">
+          <e p="Editor" t="Include">
+            <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
+            <e p="NavMeshLinkEditor.cs" t="Include" />
+            <e p="NavMeshModifierEditor.cs" t="Include" />
+            <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
+            <e p="NavMeshSurfaceEditor.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="NavMeshLink.cs" t="Include" />
+            <e p="NavMeshModifier.cs" t="Include" />
+            <e p="NavMeshModifierVolume.cs" t="Include" />
+            <e p="NavMeshSurface.cs" t="Include" />
+          </e>
+        </e>
+        <e p="ObjectLoaderHelper.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="UniRx" t="Include">
             <e p="Examples" t="Include">
@@ -1219,6 +1237,7 @@
             <e p="BossCombatController.cs" t="Include" />
             <e p="BossDefeated.cs" t="Include" />
             <e p="BossEnemyBehaviour.cs" t="Include" />
+            <e p="BossHealth.cs" t="Include" />
             <e p="EnemiesPackRangeDetection.cs" t="Include" />
             <e p="EnemyAttack.cs" t="Include" />
             <e p="EnemyAutoAttacks.cs" t="Include" />
@@ -1226,11 +1245,17 @@
             <e p="EnemyHealth.cs" t="Include" />
           </e>
           <e p="Environnement" t="Include">
+            <e p="BossRoomDoor.cs" t="Include" />
             <e p="Destroyer.cs" t="Include" />
             <e p="RoomCount.cs" t="Include" />
             <e p="RoomManager.cs" t="Include" />
             <e p="RoomSpawner.cs" t="Include" />
             <e p="RoomTemplates.cs" t="Include" />
+          </e>
+          <e p="SaveSystem" t="Include">
+            <e p="SaveManager.cs" t="Include" />
+            <e p="SaveObject.cs" t="Include" />
+            <e p="SaveSystem.cs" t="Include" />
           </e>
           <e p="Skills" t="Include">
             <e p="CircularSlash.cs" t="Include" />
@@ -1256,6 +1281,7 @@
             <e p="TriggerGroundDetectedEventDispatcher.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="EndGameHandle.cs" t="Include" />
             <e p="LevelLoader.cs" t="Include" />
             <e p="MainMenu.cs" t="Include" />
             <e p="OptionsMenu.cs" t="Include" />
@@ -1293,6 +1319,7 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="turnHalo.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

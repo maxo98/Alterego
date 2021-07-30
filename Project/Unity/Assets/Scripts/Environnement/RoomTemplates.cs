@@ -35,6 +35,7 @@ public class RoomTemplates : MonoBehaviour
     private Vector3 doorOffsetX;
 
     public GameObject VictoryScreen;
+    public GameObject LoseScreen;
 
     #region Singleton
 

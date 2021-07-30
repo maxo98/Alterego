@@ -13,7 +13,7 @@ namespace Enemy
         [SerializeField] private int maxCombo = 3;
         [SerializeField] private Animator animator;
 
-        [SerializeField] private CharacterAutoAttacks autoAttacks;
+        [SerializeField] private EnemyAutoAttacks autoAttacks;
         public bool IsAttacking { get; private set; }
         private static readonly int AnimationPlaying = Animator.StringToHash("AnimationPlaying");
         private bool _lightAttackIntent;

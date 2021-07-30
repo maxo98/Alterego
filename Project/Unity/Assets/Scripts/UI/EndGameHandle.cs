@@ -4,25 +4,20 @@ using UnityEngine;
 
 public class EndGameHandle : MonoBehaviour
 {
-    [SerializeField] private static GameObject victoryScreen;
-    [SerializeField] private static GameObject loseScreen;
-    private void Awake()
+    [SerializeField] private static RoomTemplates roomTemplates;
+
+    public void VictoryScreen()
     {
-        victoryScreen = GameObject.FindGameObjectWithTag("Victory");
-        loseScreen = GameObject.FindGameObjectWithTag("Lose");
-    }
-    public static void VictoryScreen()
-    {
-        victoryScreen.SetActive(true);
+        RoomTemplates.instance.VictoryScreen.SetActive(true);
         Time.timeScale = 0f;
         PauseMenu.GameisPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
-    public static void LoseScreen()
+    public void LoseScreen()
     {
-        loseScreen.SetActive(true);
+        RoomTemplates.instance.LoseScreen.SetActive(true);
         Time.timeScale = 0f;
         PauseMenu.GameisPaused = true;
         Cursor.lockState = CursorLockMode.None;

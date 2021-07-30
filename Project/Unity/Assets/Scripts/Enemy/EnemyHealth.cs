@@ -54,7 +54,7 @@ public class EnemyHealth : MonoBehaviour
     public void DoDamage(float dmg)
     {
         health -= dmg;
-        StartCoroutine(WaitAfterDealingDamage());
+        //StartCoroutine(WaitAfterDealingDamage());
     }
 
     IEnumerator WaitAfterDealingDamage()

@@ -1,4 +1,5 @@
 ﻿using System;
+using ThirdPersonScripts;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = System.Random;
@@ -9,6 +10,7 @@ namespace Enemy
     {
         [SerializeField] private float attackCooldown;
         [SerializeField] private float attackRange;
+        [SerializeField] private float autoAttackBaseDamage;
         [SerializeField] private BossCombatController bossCombatController;
         [SerializeField] private EnemyAutoAttacks enemyAutoAttacks;
 
@@ -23,7 +25,8 @@ namespace Enemy
                 //Debug.Log("enemy target : " + _target.name);
                 _currentAttackCooldown = attackCooldown;
                 //Debug.Log("Enemy Attack");
-                if (_rand.Next(1, 2) == 1)
+                var combo = _rand.Next(1, 3);
+                if (combo == 1)
                 {
                     bossCombatController.HeavyEnemyAttack();
                 }
@@ -31,6 +34,7 @@ namespace Enemy
                 {
                     bossCombatController.LightEnemyAttack();
                 }
+                Player.GetComponentInParent<CharacterStatistic>().PlayerDamaged(autoAttackBaseDamage * combo);
             }
             else
             {

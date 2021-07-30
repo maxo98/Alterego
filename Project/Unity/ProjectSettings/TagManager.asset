@@ -14,6 +14,7 @@ TagManager:
   - Key
   - Victory
   - Lose
+  - UI_Pause
   layers:
   - Default
   - TransparentFX

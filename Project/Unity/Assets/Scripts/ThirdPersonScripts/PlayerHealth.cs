@@ -7,13 +7,22 @@ namespace ThirdPersonScripts
 {
     public class PlayerHealth : MonoBehaviour
     {
-        [SerializeField] private GameObject healthUI;
+        [SerializeField] private static GameObject pause;
         [SerializeField] private Slider sliderHealth;
         [SerializeField] private CharacterStatistic characterStatistic;
+
+        private void Awake()
+        {
+            pause = GameObject.FindGameObjectWithTag("UI_Pause");
+        }
 
         private void Update()
         {
             sliderHealth.value = characterStatistic.DisplayVitality() / characterStatistic.GetVitality();
+            if (characterStatistic.DisplayVitality() <= 0)
+            {
+                pause.GetComponent<EndGameHandle>().LoseScreen();
+            }
         }
     }
 }

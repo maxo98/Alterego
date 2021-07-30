@@ -733,8 +733,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dde45cdf910314eab4677b7a2010ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackBaseDamage: 10
-  attackCooldown: 3
+  attackBaseDamage: 30
+  attackCooldown: 2
   animator: {fileID: 5993054850676920169}
 --- !u!135 &8817364133408341400
 SphereCollider:
